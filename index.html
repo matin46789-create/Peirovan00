@@ -1,0 +1,1649 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="theme-color" content="#fcf8f0" />
+<meta name="description" content="پلتفرم پیروان حضرت مهدی(عج) – ذکر روز، آیه قرآن، اطلاعیه‌ها، گالری پوسترها و محتوای اختصاصی گروه‌های دانش‌آموزی." />
+<title>پیروان حضرت مهدی(عج)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&family=Amiri+Quran&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   1. DESIGN TOKENS
+   ============================================================ */
+:root {
+  --cream: #fcf8f0;
+  --cream-2: #f6efe2;
+  --cream-3: #efe7d6;
+  --white: #ffffff;
+  --green: #2d6a4f;
+  --green-deep: #1e3a2f;
+  --green-soft: #d8eddf;
+  --green-mist: #eef7f0;
+  --gold: #c9a96e;
+  --gold-deep: #a88a4f;
+  --gold-soft: #e8d5b5;
+  --gold-mist: #f6edd8;
+  --ink: #2c2c2c;
+  --ink-soft: #5a5a5a;
+  --ink-mute: #8a8a8a;
+  --ink-faint: #b9b3a8;
+  --danger: #b23b3b;
+  --danger-soft: #f6dede;
+  --success: #2d6a4f;
+  --success-soft: #d8eddf;
+  --line: rgba(201, 169, 110, 0.22);
+  --line-strong: rgba(201, 169, 110, 0.4);
+  --line-soft: rgba(45, 106, 79, 0.10);
+  --shadow-xs: 0 2px 8px rgba(30, 58, 47, 0.04);
+  --shadow-sm: 0 4px 14px rgba(30, 58, 47, 0.05);
+  --shadow-md: 0 10px 32px rgba(30, 58, 47, 0.07);
+  --shadow-lg: 0 24px 60px rgba(30, 58, 47, 0.10);
+  --shadow-xl: 0 40px 90px rgba(30, 58, 47, 0.14);
+  --radius-xs: 10px;
+  --radius-sm: 14px;
+  --radius: 20px;
+  --radius-lg: 28px;
+  --radius-xl: 36px;
+  --header-h: 68px;
+  --header-h-scrolled: 58px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-soft: cubic-bezier(0.4, 0, 0.2, 1);
+}
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; padding: 0; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 16px); overflow-x: hidden; }
+body {
+  font-family: 'Vazirmatn', system-ui, -apple-system, 'Segoe UI', Tahoma, sans-serif;
+  font-size: 16px; line-height: 1.75; color: var(--ink);
+  background: var(--cream); min-height: 100vh; min-height: 100dvh;
+  overflow-x: hidden; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility; position: relative;
+}
+body::before {
+  content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 0;
+  background-image:
+    radial-gradient(circle at 10% 6%, rgba(201, 169, 110, 0.07), transparent 42%),
+    radial-gradient(circle at 92% 86%, rgba(45, 106, 79, 0.05), transparent 46%),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'><g fill='none' stroke='%23c9a96e' stroke-width='0.55' opacity='0.09'><path d='M60 0 L120 60 L60 120 L0 60 Z'/><path d='M60 20 L100 60 L60 100 L20 60 Z'/><circle cx='60' cy='60' r='8'/></g></svg>");
+  background-size: auto, auto, 200px 200px;
+  transform: translateZ(0);
+}
+body > * { position: relative; z-index: 1; }
+img, svg { display: block; max-width: 100%; }
+button, input, textarea, select { font: inherit; color: inherit; }
+button { cursor: pointer; background: none; border: none; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+::selection { background: rgba(201, 169, 110, 0.35); color: var(--green-deep); }
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--cream-2); }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, var(--gold), var(--gold-deep)); border-radius: 20px; border: 2px solid var(--cream-2); }
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 6px; }
+body.is-locked { overflow: hidden; }
+
+.container { width: 100%; max-width: 1180px; margin: 0 auto; padding: 0 20px; }
+@media (max-width: 480px) { .container { padding: 0 16px; } }
+section { scroll-margin-top: calc(var(--header-h) + 20px); }
+.section-gap { margin-bottom: 28px; }
+@media (max-width: 640px) { .section-gap { margin-bottom: 22px; } }
+.page { display: none; }
+.page.is-active { display: block; }
+
+/* ===== HEADER ===== */
+.header {
+  position: sticky; top: 0; z-index: 500; height: var(--header-h); display: flex; align-items: center;
+  background: rgba(252, 248, 240, 0.72);
+  backdrop-filter: saturate(150%) blur(14px); -webkit-backdrop-filter: saturate(150%) blur(14px);
+  border-bottom: 1px solid transparent;
+  transition: height 0.32s var(--ease-soft), background-color 0.32s var(--ease-soft), border-color 0.32s var(--ease-soft), box-shadow 0.32s var(--ease-soft);
+  will-change: height, background-color;
+}
+.header.is-scrolled { height: var(--header-h-scrolled); background: rgba(252, 248, 240, 0.94); border-bottom-color: var(--line); box-shadow: 0 4px 24px rgba(30, 58, 47, 0.05); }
+@supports not (backdrop-filter: blur(14px)) { .header { background: rgba(252, 248, 240, 0.97); } .header.is-scrolled { background: #fcf8f0; } }
+.header-inner { width: 100%; max-width: 1180px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+@media (max-width: 480px) { .header-inner { padding: 0 14px; gap: 8px; } }
+.header-right, .header-left { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.header-left { gap: 8px; }
+.brand { display: flex; align-items: center; gap: 10px; min-width: 0; flex-shrink: 1; }
+.brand-mark { width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center; background: linear-gradient(135deg, var(--green), var(--green-deep)); color: #fff; flex: 0 0 auto; box-shadow: 0 6px 16px rgba(45, 106, 79, 0.25); transition: transform 0.35s var(--ease); }
+.brand:hover .brand-mark { transform: rotate(-6deg) scale(1.05); }
+.brand-title { font-weight: 800; font-size: 1.02rem; color: var(--green-deep); letter-spacing: -0.2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.brand-title .tag { font-size: 0.72em; color: var(--gold-deep); font-weight: 500; margin-right: 3px; }
+@media (max-width: 400px) { .brand-title { font-size: 0.9rem; } .brand-mark { width: 30px; height: 30px; } }
+.icon-btn { width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center; color: var(--green-deep); background: transparent; flex: 0 0 auto; transition: background-color 0.22s var(--ease-soft), transform 0.22s var(--ease); }
+.icon-btn:hover { background: rgba(201, 169, 110, 0.14); }
+.icon-btn:active { transform: scale(0.94); }
+.bell-btn { position: relative; width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center; color: var(--green-deep); flex: 0 0 auto; transition: background-color 0.22s var(--ease-soft), transform 0.22s var(--ease); }
+.bell-btn:hover { background: rgba(201, 169, 110, 0.14); }
+.bell-btn:active { transform: scale(0.94); }
+.bell-btn .badge { position: absolute; top: 5px; left: 5px; min-width: 17px; height: 17px; padding: 0 5px; border-radius: 999px; background: var(--gold-deep); color: #fff; font-size: 0.65rem; font-weight: 800; display: grid; place-items: center; box-shadow: 0 2px 6px rgba(168, 138, 79, 0.35); transform: scale(0); transition: transform 0.3s var(--ease); }
+.bell-btn.has-unread .badge { transform: scale(1); }
+.btn-login { display: inline-flex; align-items: center; gap: 8px; padding: 9px 20px; border-radius: 999px; background: linear-gradient(135deg, var(--green), var(--green-deep)); color: #fff; font-weight: 600; font-size: 0.9rem; box-shadow: 0 8px 22px rgba(45, 106, 79, 0.24); white-space: nowrap; transition: transform 0.22s var(--ease), box-shadow 0.22s var(--ease); }
+.btn-login:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(45, 106, 79, 0.32); }
+.btn-login:active { transform: translateY(0) scale(0.97); }
+.btn-login svg { width: 16px; height: 16px; flex: 0 0 auto; }
+@media (max-width: 360px) { .btn-login { padding: 8px 14px; font-size: 0.82rem; } .btn-login svg { display: none; } }
+
+/* ===== USER MENU ===== */
+.user-menu { position: relative; display: none; }
+.user-menu.is-active { display: block; }
+.user-avatar-btn { width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, var(--green), var(--green-deep)); color: #fff; font-weight: 800; font-size: 0.95rem; display: grid; place-items: center; position: relative; box-shadow: 0 4px 14px rgba(45, 106, 79, 0.28); border: 2px solid #fff; transition: transform 0.22s var(--ease), box-shadow 0.22s var(--ease); }
+.user-avatar-btn:hover { transform: scale(1.06); }
+.user-avatar-btn::after { content: ''; position: absolute; bottom: -1px; left: -1px; width: 12px; height: 12px; border-radius: 50%; background: #5cc47c; border: 2px solid #fcf8f0; }
+@media (max-width: 380px) { .user-avatar-btn { width: 38px; height: 38px; font-size: 0.9rem; } }
+.user-dropdown { position: absolute; top: calc(100% + 10px); left: 0; width: min(360px, 90vw); background: linear-gradient(180deg, #fffdf8, #fbf6ec); border-radius: var(--radius-lg); box-shadow: 0 24px 60px rgba(30, 58, 47, 0.18); border: 1px solid var(--line); opacity: 0; pointer-events: none; transform: translateY(-8px) scale(0.97); transform-origin: top left; transition: opacity 0.25s var(--ease-soft), transform 0.25s var(--ease); z-index: 1000; overflow: hidden; }
+.user-dropdown.is-open { opacity: 1; pointer-events: auto; transform: translateY(0) scale(1); }
+.user-dropdown-head { padding: 18px 20px; background: radial-gradient(circle at 100% 0%, rgba(201, 169, 110, 0.14), transparent 55%), linear-gradient(135deg, rgba(45, 106, 79, 0.04), rgba(201, 169, 110, 0.06)); border-bottom: 1px solid var(--line); display: flex; align-items: center; gap: 12px; }
+.avatar-lg { width: 52px; height: 52px; border-radius: 50%; background: linear-gradient(135deg, var(--green), var(--green-deep)); color: #fff; font-weight: 800; font-size: 1.3rem; display: grid; place-items: center; flex: 0 0 auto; box-shadow: 0 6px 16px rgba(45, 106, 79, 0.28); }
+.user-dropdown-head .name { font-weight: 800; color: var(--green-deep); font-size: 1rem; }
+.user-dropdown-head .meta { font-size: 0.8rem; color: var(--ink-mute); margin-top: 3px; }
+.group-chip { display: inline-flex; padding: 2px 10px; border-radius: 999px; background: var(--green-mist); color: var(--green); font-weight: 700; font-size: 0.75rem; }
+.user-dropdown-section { padding: 14px 18px; }
+.user-dropdown-section + .user-dropdown-section { border-top: 1px solid var(--line); }
+.user-dropdown-title { font-size: 0.72rem; font-weight: 800; color: var(--gold-deep); margin-bottom: 10px; display: flex; justify-content: space-between; }
+.user-dropdown-title .count { background: var(--gold-mist); padding: 1px 8px; border-radius: 999px; }
+.exam-results-list { display: grid; gap: 8px; max-height: 240px; overflow-y: auto; }
+.exam-result-item { background: #fff; border-radius: 12px; padding: 10px 12px; border: 1px solid var(--line); display: flex; align-items: center; gap: 10px; }
+.score-badge { width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; flex: 0 0 auto; background: conic-gradient(var(--green) var(--pct, 0%), rgba(201, 169, 110, 0.2) 0%); position: relative; }
+.score-badge::before { content: ''; position: absolute; inset: 4px; border-radius: 50%; background: #fff; }
+.score-badge span { position: relative; z-index: 1; color: var(--green-deep); font-weight: 900; font-size: 0.78rem; }
+.score-badge.low { background: conic-gradient(var(--danger) var(--pct, 0%), rgba(201, 169, 110, 0.2) 0%); }
+.score-badge.low span { color: var(--danger); }
+.exam-result-item .title { font-weight: 700; color: var(--green-deep); font-size: 0.86rem; }
+.exam-result-item .meta { font-size: 0.72rem; color: var(--ink-mute); margin-top: 2px; }
+.empty-results { text-align: center; padding: 18px 10px; color: var(--ink-mute); font-size: 0.82rem; }
+.user-dropdown-actions { padding: 12px 18px 16px; display: flex; flex-direction: column; gap: 4px; border-top: 1px solid var(--line); }
+.dropdown-action { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-radius: 10px; font-size: 0.88rem; font-weight: 600; color: var(--green-deep); text-align: right; width: 100%; transition: background-color 0.2s var(--ease-soft); }
+.dropdown-action:hover { background: rgba(201, 169, 110, 0.12); }
+.dropdown-action svg { width: 16px; height: 16px; flex: 0 0 auto; color: var(--green); }
+.dropdown-action.danger { color: var(--danger); }
+.dropdown-action.danger svg { color: var(--danger); }
+.dropdown-action.danger:hover { background: var(--danger-soft); }
+.dropdown-overlay { position: fixed; inset: 0; z-index: 400; background: transparent; display: none; }
+.dropdown-overlay.is-open { display: block; }
+
+/* ===== DRAWER ===== */
+.overlay { position: fixed; inset: 0; background: rgba(30, 58, 47, 0.38); opacity: 0; pointer-events: none; transition: opacity 0.36s var(--ease-soft); z-index: 800; will-change: opacity; }
+.overlay.is-open { opacity: 1; pointer-events: auto; }
+.drawer { position: fixed; top: 0; right: 0; bottom: 0; width: min(340px, 88vw); background: linear-gradient(180deg, #fffdf8 0%, #fbf6ec 100%); box-shadow: -20px 0 60px rgba(30, 58, 47, 0.14); z-index: 900; transform: translateX(100%); transition: transform 0.42s var(--ease); display: flex; flex-direction: column; overflow: hidden; border-left: 1px solid var(--line); will-change: transform; }
+.drawer.is-open { transform: translateX(0); }
+.drawer-head { padding: 20px 20px 16px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); flex: 0 0 auto; position: relative; }
+.drawer-head::after { content: ''; position: absolute; left: 20px; right: 20px; bottom: -1px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+.drawer-brand { display: flex; align-items: center; gap: 10px; font-weight: 800; color: var(--green-deep); font-size: 0.96rem; min-width: 0; }
+.drawer-body { flex: 1 1 auto; overflow-y: auto; -webkit-overflow-scrolling: touch; padding: 12px 10px 18px; overscroll-behavior: contain; }
+.drawer-group-title { font-size: 0.7rem; font-weight: 800; letter-spacing: 1.5px; color: var(--gold-deep); text-transform: uppercase; padding: 16px 14px 8px; }
+.drawer-link { display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-radius: 14px; color: var(--green-deep); font-weight: 500; font-size: 0.97rem; transition: background-color 0.2s var(--ease-soft), transform 0.2s var(--ease); position: relative; width: 100%; text-align: right; }
+.drawer-link:hover { background: rgba(201, 169, 110, 0.13); }
+.drawer-link:active { transform: scale(0.98); }
+.drawer-link.is-active { background: rgba(45, 106, 79, 0.10); }
+.drawer-link .ico { width: 36px; height: 36px; border-radius: 11px; display: grid; place-items: center; background: var(--green-mist); color: var(--green); flex: 0 0 auto; transition: background-color 0.22s var(--ease-soft), color 0.22s var(--ease-soft); }
+.drawer-link:hover .ico { background: var(--green); color: #fff; }
+.drawer-link .arrow { margin-right: auto; color: var(--gold); font-size: 1.1rem; opacity: 0.7; transition: transform 0.25s var(--ease); }
+.drawer-link:hover .arrow { transform: translateX(-4px); }
+.drawer-foot { padding: 16px 22px 20px; border-top: 1px solid var(--line); font-size: 0.78rem; color: var(--ink-mute); text-align: center; flex: 0 0 auto; }
+.drawer-foot strong { color: var(--gold-deep); font-weight: 700; }
+
+/* ===== HERO ===== */
+.hero { padding: 42px 0 28px; text-align: center; position: relative; overflow: hidden; }
+.bismillah-wrap { position: relative; display: inline-block; padding: 20px 60px; max-width: 100%; }
+.bismillah-flourish { position: absolute; top: 50%; width: 84px; height: 22px; transform: translateY(-50%); color: var(--gold); opacity: 0.7; pointer-events: none; }
+.bismillah-flourish.left { left: -14px; }
+.bismillah-flourish.right { right: -14px; transform: translateY(-50%) scaleX(-1); }
+.bismillah { font-family: 'Amiri Quran', serif; font-size: clamp(1.6rem, 4.2vw, 2.5rem); color: var(--green-deep); line-height: 1.5; letter-spacing: 0.5px; text-shadow: 0 2px 18px rgba(201, 169, 110, 0.18); }
+.hero-sub { margin-top: 12px; color: var(--ink-soft); font-size: 0.96rem; max-width: 520px; margin-inline: auto; padding: 0 16px; line-height: 1.9; }
+.hero-ornament { width: 200px; height: 16px; margin: 20px auto 0; color: var(--gold); opacity: 0.85; }
+@media (max-width: 640px) { .hero { padding: 28px 0 18px; } .bismillah-wrap { padding: 12px 26px; } .bismillah-flourish { width: 40px; } .bismillah-flourish.left { left: -6px; } .bismillah-flourish.right { right: -6px; } }
+
+/* ===== SECTION HEAD ===== */
+.sec-head { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; padding: 0 2px; }
+.sec-head .marker { width: 4px; height: 22px; border-radius: 4px; background: linear-gradient(180deg, var(--gold), var(--gold-deep)); flex: 0 0 auto; }
+.sec-head h2 { font-size: 1.1rem; font-weight: 800; color: var(--green-deep); letter-spacing: -0.2px; }
+.sec-head .hint { margin-right: auto; font-size: 0.82rem; color: var(--ink-mute); font-weight: 500; }
+
+/* ===== CARD ===== */
+.card { background: var(--white); border-radius: var(--radius-lg); border: 1px solid var(--line); box-shadow: var(--shadow-md); padding: 26px 24px; position: relative; transition: box-shadow 0.32s var(--ease-soft); }
+@media (max-width: 480px) { .card { padding: 22px 18px; border-radius: 22px; } }
+.card.has-corners::before, .card.has-corners::after { content: ''; position: absolute; width: 40px; height: 40px; pointer-events: none; opacity: 0.5; }
+.card.has-corners::before { top: 10px; right: 10px; border-top: 1.5px solid var(--gold); border-right: 1.5px solid var(--gold); border-top-right-radius: 10px; }
+.card.has-corners::after { bottom: 10px; left: 10px; border-bottom: 1.5px solid var(--gold); border-left: 1.5px solid var(--gold); border-bottom-left-radius: 10px; }
+
+/* ===== NOTIFICATIONS ===== */
+.notif-section { margin-bottom: 28px; }
+.notif-hero { position: relative; border-radius: var(--radius-xl); overflow: hidden; background: radial-gradient(circle at 100% 0%, rgba(201, 169, 110, 0.22), transparent 55%), radial-gradient(circle at 0% 100%, rgba(45, 106, 79, 0.12), transparent 55%), linear-gradient(135deg, #1e3a2f 0%, #2d6a4f 100%); color: #fff; padding: 32px 28px; box-shadow: var(--shadow-lg); border: 1px solid rgba(201, 169, 110, 0.35); display: grid; grid-template-columns: 1fr auto; gap: 22px; align-items: center; isolation: isolate; }
+.notif-hero::before { content: ''; position: absolute; inset: 0; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'><g fill='none' stroke='%23c9a96e' stroke-width='0.7' opacity='0.20'><path d='M40 0 L80 40 L40 80 L0 40 Z'/><circle cx='40' cy='40' r='5'/></g></svg>"); background-size: 80px 80px; opacity: 0.6; z-index: -1; pointer-events: none; }
+.notif-hero-body { min-width: 0; }
+.notif-badge { display: inline-flex; align-items: center; gap: 8px; padding: 5px 12px; border-radius: 999px; background: rgba(255, 255, 255, 0.14); border: 1px solid rgba(232, 213, 181, 0.4); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.3px; margin-bottom: 14px; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+.notif-badge .dot { width: 6px; height: 6px; border-radius: 50%; background: #ffd97a; box-shadow: 0 0 0 4px rgba(255, 217, 122, 0.2); animation: pulse-gold 2.4s var(--ease-soft) infinite; }
+@keyframes pulse-gold { 0%, 100% { box-shadow: 0 0 0 4px rgba(255, 217, 122, 0.25); } 50% { box-shadow: 0 0 0 9px rgba(255, 217, 122, 0.08); } }
+.notif-hero h3 { font-size: clamp(1.15rem, 2.8vw, 1.5rem); font-weight: 800; line-height: 1.45; margin-bottom: 8px; letter-spacing: -0.3px; }
+.notif-hero p { font-size: 0.94rem; line-height: 1.85; color: rgba(255, 255, 255, 0.85); margin-bottom: 16px; max-width: 560px; }
+.notif-meta { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; font-size: 0.8rem; color: rgba(255, 255, 255, 0.7); margin-bottom: 18px; }
+.notif-meta span { display: inline-flex; align-items: center; gap: 6px; }
+.notif-meta svg { width: 13px; height: 13px; opacity: 0.8; }
+.notif-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.btn-notif-primary { display: inline-flex; align-items: center; gap: 8px; padding: 11px 22px; border-radius: 999px; background: linear-gradient(135deg, #ffd97a, var(--gold)); color: var(--green-deep); font-weight: 700; font-size: 0.9rem; box-shadow: 0 10px 26px rgba(201, 169, 110, 0.4); transition: transform 0.22s var(--ease), box-shadow 0.22s var(--ease); }
+.btn-notif-primary:hover { transform: translateY(-2px); box-shadow: 0 14px 32px rgba(201, 169, 110, 0.5); }
+.btn-notif-ghost { display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; border-radius: 999px; background: rgba(255, 255, 255, 0.10); border: 1px solid rgba(255, 255, 255, 0.25); color: #fff; font-weight: 600; font-size: 0.88rem; transition: background-color 0.22s var(--ease-soft), transform 0.22s var(--ease); }
+.btn-notif-ghost:hover { background: rgba(255, 255, 255, 0.18); }
+@media (max-width: 720px) { .notif-hero { grid-template-columns: 1fr; padding: 26px 20px; gap: 18px; border-radius: 26px; } }
+.notif-strip { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(240px, 1fr); gap: 12px; overflow-x: auto; padding: 4px 2px 12px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; margin-top: 14px; }
+.notif-strip::-webkit-scrollbar { display: none; }
+.notif-mini { scroll-snap-align: start; background: var(--white); border-radius: var(--radius); border: 1px solid var(--line); padding: 16px 18px; cursor: pointer; transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease-soft), border-color 0.25s var(--ease-soft); box-shadow: var(--shadow-xs); text-align: right; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.notif-mini:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--line-strong); }
+.notif-mini .cat { display: inline-flex; align-items: center; gap: 6px; align-self: flex-start; padding: 3px 10px; border-radius: 999px; background: var(--gold-mist); color: var(--gold-deep); font-size: 0.7rem; font-weight: 700; }
+.notif-mini .cat.info { background: var(--green-mist); color: var(--green); }
+.notif-mini .cat.urgent { background: var(--danger-soft); color: var(--danger); }
+.notif-mini .cat.success { background: var(--success-soft); color: var(--success); }
+.notif-mini h4 { font-size: 0.95rem; font-weight: 700; color: var(--green-deep); line-height: 1.55; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.notif-mini .date { font-size: 0.78rem; color: var(--ink-mute); margin-top: auto; }
+
+/* ===== ZEKR ===== */
+.zekr-card { background: radial-gradient(circle at 100% 0%, rgba(201, 169, 110, 0.14), transparent 55%), radial-gradient(circle at 0% 100%, rgba(45, 106, 79, 0.08), transparent 55%), linear-gradient(180deg, #fffdf8 0%, #fbf6ec 100%); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 32px 24px 28px; position: relative; overflow: hidden; box-shadow: var(--shadow-lg); text-align: center; }
+.zekr-card::before { content: ''; position: absolute; inset: 10px; border: 1px solid rgba(201, 169, 110, 0.35); border-radius: calc(var(--radius-lg) - 10px); pointer-events: none; }
+.zekr-corner { position: absolute; width: 42px; height: 42px; color: var(--gold); opacity: 0.7; pointer-events: none; }
+.zekr-corner.tl { top: 6px; right: 6px; }
+.zekr-corner.tr { top: 6px; left: 6px; transform: scaleX(-1); }
+.zekr-corner.bl { bottom: 6px; right: 6px; transform: scaleY(-1); }
+.zekr-corner.br { bottom: 6px; left: 6px; transform: scale(-1); }
+.zekr-badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 999px; background: rgba(45, 106, 79, 0.08); color: var(--green-deep); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.3px; margin-bottom: 12px; border: 1px solid rgba(45, 106, 79, 0.14); }
+.zekr-badge .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 4px rgba(45, 106, 79, 0.14); animation: pulse-green 2.4s var(--ease-soft) infinite; }
+@keyframes pulse-green { 0%, 100% { box-shadow: 0 0 0 4px rgba(45, 106, 79, 0.14); } 50% { box-shadow: 0 0 0 8px rgba(45, 106, 79, 0.06); } }
+.zekr-day { font-size: 0.92rem; color: var(--gold-deep); font-weight: 700; margin-bottom: 6px; }
+.zekr-text { font-size: clamp(1.7rem, 5.6vw, 2.8rem); font-weight: 800; line-height: 1.35; color: var(--green-deep); letter-spacing: -0.5px; padding: 10px 0 6px; background: linear-gradient(180deg, var(--green-deep), var(--green)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; transition: opacity 0.35s var(--ease-soft), transform 0.35s var(--ease-soft); will-change: opacity, transform; }
+.zekr-text.is-changing { opacity: 0; transform: translateY(8px); }
+.zekr-divider { width: 120px; height: 12px; margin: 14px auto 10px; color: var(--gold); opacity: 0.85; }
+.zekr-note { font-size: 0.9rem; color: var(--ink-soft); max-width: 480px; margin: 0 auto; line-height: 1.85; }
+@media (max-width: 480px) { .zekr-card { padding: 26px 18px 22px; } }
+
+/* ===== AYAH ===== */
+.ayah-card { background: linear-gradient(180deg, #ffffff 0%, #fdfbf6 100%); }
+.ayah-meta { display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+.ayah-chip { display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px; border-radius: 999px; background: var(--green-mist); color: var(--green-deep); font-size: 0.78rem; font-weight: 700; border: 1px solid rgba(45, 106, 79, 0.14); }
+.ayah-chip.gold { background: rgba(201, 169, 110, 0.14); color: var(--gold-deep); border-color: rgba(201, 169, 110, 0.28); }
+.ayah-text { font-family: 'Amiri Quran', serif; font-size: clamp(1.3rem, 4.2vw, 1.95rem); line-height: 2.1; text-align: center; color: var(--green-deep); padding: 6px 4px 18px; direction: rtl; letter-spacing: 0; }
+.ayah-trans { background: var(--cream-2); border-radius: var(--radius-sm); padding: 14px 16px; border-right: 3px solid var(--gold); color: var(--ink); font-size: 0.96rem; line-height: 1.9; }
+.ayah-trans .lbl { display: inline-block; font-weight: 800; color: var(--green); margin-left: 6px; }
+.ayah-actions { display: flex; gap: 8px; justify-content: center; margin-top: 16px; flex-wrap: wrap; }
+.ayah-action { display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; border-radius: 999px; background: var(--cream-2); color: var(--ink-soft); font-size: 0.82rem; font-weight: 600; transition: background-color 0.22s var(--ease-soft), color 0.22s var(--ease-soft); }
+.ayah-action:hover { background: var(--gold-mist); color: var(--gold-deep); }
+.ayah-action:active { transform: scale(0.96); }
+.ayah-action svg { width: 14px; height: 14px; }
+
+/* ===== INSPIRATION ===== */
+.inspire-card { background: linear-gradient(135deg, rgba(45, 106, 79, 0.05), rgba(201, 169, 110, 0.06)), #fffdf8; display: flex; align-items: flex-start; gap: 16px; padding: 22px 22px; }
+.inspire-card .glyph { width: 44px; height: 44px; border-radius: 13px; display: grid; place-items: center; background: linear-gradient(135deg, var(--green), var(--green-deep)); color: #fff; flex: 0 0 auto; box-shadow: 0 10px 22px rgba(45, 106, 79, 0.22); }
+.inspire-card .body { flex: 1; min-width: 0; }
+.inspire-card .label { font-size: 0.75rem; font-weight: 800; color: var(--gold-deep); letter-spacing: 0.4px; margin-bottom: 4px; }
+.inspire-card .quote { font-size: 1rem; color: var(--green-deep); font-weight: 500; line-height: 1.9; }
+.inspire-card .author { margin-top: 6px; font-size: 0.8rem; color: var(--ink-mute); }
+@media (max-width: 480px) { .inspire-card { padding: 18px 16px; gap: 12px; } .inspire-card .glyph { width: 38px; height: 38px; } .inspire-card .quote { font-size: 0.94rem; } }
+
+/* ===== GALLERY ===== */
+.gallery-card { padding: 16px; }
+.slider { position: relative; border-radius: var(--radius); overflow: hidden; background: var(--cream-2); aspect-ratio: 4/5; max-height: 520px; touch-action: pan-y; user-select: none; -webkit-user-select: none; }
+.slider.is-single { aspect-ratio: 3/4; }
+.slider-track { display: flex; height: 100%; transition: transform 0.65s var(--ease); will-change: transform; }
+.slide { flex: 0 0 100%; height: 100%; display: grid; place-items: center; padding: 12px; background: radial-gradient(circle at 50% 50%, #fffdf8 0%, var(--cream-2) 100%); }
+.slide img { width: 100%; height: 100%; object-fit: contain; border-radius: 14px; box-shadow: 0 12px 30px rgba(30, 58, 47, 0.10); pointer-events: none; -webkit-user-drag: none; background: #fff; }
+.slider-nav { position: absolute; top: 50%; transform: translateY(-50%); width: 40px; height: 40px; border-radius: 50%; background: rgba(255, 255, 255, 0.88); display: grid; place-items: center; color: var(--green-deep); box-shadow: 0 6px 20px rgba(30, 58, 47, 0.14); opacity: 0; z-index: 2; transition: transform 0.22s var(--ease), opacity 0.22s var(--ease-soft); }
+.slider:hover .slider-nav { opacity: 1; }
+.slider-nav:hover { transform: translateY(-50%) scale(1.06); }
+.slider-nav.prev { right: 12px; }
+.slider-nav.next { left: 12px; }
+@media (hover: none) { .slider-nav { opacity: 1; width: 36px; height: 36px; } }
+.slider-dots { display: flex; justify-content: center; align-items: center; gap: 8px; padding: 14px 0 4px; }
+.slider-dots button { width: 8px; height: 8px; border-radius: 999px; background: #d9d0bd; transition: width 0.3s var(--ease), background-color 0.3s var(--ease-soft); }
+.slider-dots button.is-active { width: 26px; background: linear-gradient(90deg, var(--gold), var(--gold-deep)); }
+
+/* ===== STUDENT ===== */
+.student-card { background: radial-gradient(circle at 100% 0%, rgba(201, 169, 110, 0.10), transparent 55%), linear-gradient(180deg, #fffdf8, #fbf6ec); text-align: center; padding: 32px 24px; }
+.student-card .icon-badge { width: 60px; height: 60px; border-radius: 18px; margin: 0 auto 16px; display: grid; place-items: center; background: linear-gradient(135deg, var(--green), var(--green-deep)); color: #fff; box-shadow: 0 14px 30px rgba(45, 106, 79, 0.25); }
+.student-card h3 { font-size: 1.1rem; color: var(--green-deep); font-weight: 800; margin-bottom: 8px; }
+.student-card p { color: var(--ink-soft); font-size: 0.92rem; max-width: 460px; margin: 0 auto 20px; line-height: 1.85; }
+.student-logged { display: none; }
+.student-logged.is-active { display: block; }
+.student-header { display: flex; align-items: center; gap: 14px; padding: 16px 18px; background: #fff; border-radius: var(--radius); border: 1px solid var(--line); box-shadow: var(--shadow-sm); margin-bottom: 14px; flex-wrap: wrap; }
+.student-avatar { width: 48px; height: 48px; border-radius: 14px; background: linear-gradient(135deg, var(--green), var(--green-deep)); color: #fff; display: grid; place-items: center; font-weight: 800; font-size: 1.15rem; flex: 0 0 auto; }
+.student-info { flex: 1; min-width: 0; }
+.student-info .name { font-weight: 700; color: var(--green-deep); font-size: 0.98rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.student-info .meta { font-size: 0.8rem; color: var(--ink-mute); margin-top: 2px; }
+.btn-logout { padding: 8px 16px; border-radius: 999px; border: 1px solid var(--line); color: var(--ink-soft); font-size: 0.82rem; font-weight: 600; transition: background-color 0.22s var(--ease-soft), color 0.22s var(--ease-soft); flex: 0 0 auto; }
+.btn-logout:hover { background: rgba(201, 169, 110, 0.10); color: var(--green-deep); }
+
+/* ===== FAQ ===== */
+.faq-item { background: #fff; border: 1px solid var(--line); border-radius: var(--radius-sm); margin-bottom: 10px; overflow: hidden; transition: border-color 0.25s var(--ease-soft), box-shadow 0.25s var(--ease-soft); }
+.faq-item:last-child { margin-bottom: 0; }
+.faq-item:hover { border-color: var(--gold-soft); }
+.faq-item.is-open { border-color: var(--gold); box-shadow: 0 8px 24px rgba(201, 169, 110, 0.12); }
+.faq-q { width: 100%; display: flex; align-items: center; gap: 12px; padding: 16px 18px; text-align: right; font-weight: 600; font-size: 0.94rem; color: var(--green-deep); transition: background-color 0.22s var(--ease-soft); }
+.faq-q:hover { background: rgba(201, 169, 110, 0.06); }
+.faq-q .chev { margin-right: auto; color: var(--gold); transition: transform 0.35s var(--ease); }
+.faq-item.is-open .faq-q .chev { transform: rotate(180deg); }
+.faq-a { max-height: 0; overflow: hidden; padding: 0 18px; color: var(--ink-soft); font-size: 0.9rem; line-height: 1.85; border-top: 1px dashed transparent; transition: max-height 0.4s var(--ease-soft), padding 0.4s var(--ease-soft), border-color 0.3s var(--ease-soft); }
+.faq-item.is-open .faq-a { max-height: 300px; padding: 12px 18px 18px; border-top-color: var(--line); }
+
+/* ===== BUTTONS ===== */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 24px; border-radius: 999px; font-weight: 600; font-size: 0.94rem; transition: transform 0.22s var(--ease), box-shadow 0.22s var(--ease), background-color 0.22s var(--ease-soft); min-height: 44px; }
+.btn-primary { background: linear-gradient(135deg, var(--green), var(--green-deep)); color: #fff; box-shadow: 0 12px 28px rgba(45, 106, 79, 0.25); }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 16px 34px rgba(45, 106, 79, 0.32); }
+.btn-ghost { background: var(--cream-2); color: var(--green-deep); }
+.btn-ghost:hover { background: #eee6d6; }
+
+/* ===== MODAL ===== */
+.modal { position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center; padding: 20px; background: rgba(30, 58, 47, 0.45); opacity: 0; pointer-events: none; transition: opacity 0.32s var(--ease-soft); overflow-y: auto; overscroll-behavior: contain; }
+.modal.is-open { opacity: 1; pointer-events: auto; }
+.modal-box { width: 100%; max-width: 460px; background: linear-gradient(180deg, #fffdf8, #fbf6ec); border-radius: var(--radius-xl); padding: 32px 26px 26px; box-shadow: var(--shadow-xl); border: 1px solid var(--line); position: relative; transform: translateY(16px) scale(0.97); transition: transform 0.36s var(--ease); margin: auto; max-height: calc(100vh - 40px); overflow-y: auto; }
+.modal.is-open .modal-box { transform: translateY(0) scale(1); }
+.modal-box.wide { max-width: 620px; }
+.modal-close { position: absolute; top: 14px; left: 14px; width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; color: var(--ink-soft); transition: background-color 0.22s var(--ease-soft); z-index: 2; }
+.modal-close:hover { background: rgba(201, 169, 110, 0.14); }
+.modal-icon { width: 58px; height: 58px; border-radius: 18px; margin: 0 auto 16px; display: grid; place-items: center; background: linear-gradient(135deg, var(--green), var(--green-deep)); color: #fff; box-shadow: 0 14px 30px rgba(45, 106, 79, 0.28); }
+.modal h3 { text-align: center; font-size: 1.2rem; color: var(--green-deep); font-weight: 800; margin-bottom: 8px; }
+.modal .sub { text-align: center; color: var(--ink-soft); font-size: 0.9rem; margin-bottom: 20px; line-height: 1.75; }
+.field-label { display: block; font-size: 0.85rem; font-weight: 700; color: var(--green-deep); margin-bottom: 8px; }
+.field-input { width: 100%; padding: 14px 16px; border-radius: 14px; border: 2px solid #e8e0d0; background: #fff; font-size: 1rem; font-weight: 700; letter-spacing: 1.5px; text-align: center; direction: ltr; color: var(--green-deep); transition: border-color 0.22s var(--ease-soft), box-shadow 0.22s var(--ease-soft); font-family: 'Vazirmatn', monospace; }
+.field-input::placeholder { color: #b9b0a0; letter-spacing: 1px; font-weight: 400; }
+.field-input:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 5px rgba(201, 169, 110, 0.16); }
+.modal-actions { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
+.modal-actions .btn { flex: 1; min-width: 120px; }
+.form-msg { margin-top: 12px; text-align: center; font-size: 0.86rem; min-height: 22px; font-weight: 600; }
+.form-msg.err { color: var(--danger); }
+.form-msg.ok { color: var(--success); }
+.notif-detail-cat { display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; border-radius: 999px; background: var(--gold-mist); color: var(--gold-deep); font-size: 0.75rem; font-weight: 700; margin-bottom: 12px; }
+.notif-detail-cat.info { background: var(--green-mist); color: var(--green); }
+.notif-detail-cat.urgent { background: var(--danger-soft); color: var(--danger); }
+.notif-detail-cat.success { background: var(--success-soft); color: var(--success); }
+.notif-detail-title { font-size: 1.25rem; font-weight: 800; color: var(--green-deep); line-height: 1.5; margin-bottom: 10px; text-align: right; }
+.notif-detail-meta { display: flex; gap: 14px; flex-wrap: wrap; font-size: 0.8rem; color: var(--ink-mute); margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px dashed var(--line); }
+.notif-detail-meta span { display: inline-flex; align-items: center; gap: 6px; }
+.notif-detail-meta svg { width: 13px; height: 13px; }
+.notif-detail-body { font-size: 0.94rem; line-height: 1.95; color: var(--ink); text-align: right; margin-bottom: 20px; }
+
+/* ===== FOOTER ===== */
+.footer { margin-top: 40px; padding: 40px 0 24px; background: linear-gradient(180deg, transparent, rgba(201, 169, 110, 0.06)); border-top: 1px solid var(--line); position: relative; }
+.footer::before { content: ''; position: absolute; top: -1px; left: 50%; transform: translateX(-50%); width: 120px; height: 3px; background: linear-gradient(90deg, transparent, var(--gold), transparent); border-radius: 3px; }
+.footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 30px; margin-bottom: 28px; }
+@media (max-width: 720px) { .footer-grid { grid-template-columns: 1fr; gap: 22px; text-align: center; } }
+.footer-brand { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; font-weight: 800; color: var(--green-deep); font-size: 1rem; }
+@media (max-width: 720px) { .footer-brand { justify-content: center; } }
+.footer-desc { color: var(--ink-soft); font-size: 0.88rem; line-height: 1.9; max-width: 340px; }
+@media (max-width: 720px) { .footer-desc { margin: 0 auto; } }
+.footer h4 { font-size: 0.78rem; font-weight: 800; color: var(--gold-deep); letter-spacing: 0.6px; margin-bottom: 12px; }
+.footer ul li { padding: 5px 0; font-size: 0.88rem; color: var(--ink-soft); transition: color 0.2s var(--ease-soft); }
+.footer ul li a:hover { color: var(--green); }
+.footer-bottom { padding-top: 20px; border-top: 1px solid var(--line); text-align: center; font-size: 0.8rem; color: var(--ink-mute); display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap; }
+.footer-bottom .sep { color: var(--gold); }
+
+/* ===== REVEAL / TOAST ===== */
+.reveal { opacity: 0; transform: translate3d(0, 20px, 0); transition: opacity 0.7s var(--ease-soft), transform 0.7s var(--ease); will-change: opacity, transform; }
+.reveal.is-in { opacity: 1; transform: translate3d(0, 0, 0); will-change: auto; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
+  .reveal { opacity: 1; transform: none; }
+  .slider-track { transition: none; }
+}
+.toast { position: fixed; bottom: 22px; left: 50%; transform: translate3d(-50%, 20px, 0); background: var(--green-deep); color: #fff; padding: 12px 22px; border-radius: 999px; font-size: 0.88rem; font-weight: 600; box-shadow: 0 20px 40px rgba(30, 58, 47, 0.3); opacity: 0; pointer-events: none; transition: opacity 0.32s var(--ease-soft), transform 0.32s var(--ease); z-index: 2000; max-width: 88vw; text-align: center; will-change: opacity, transform; }
+.toast.is-open { opacity: 1; transform: translate3d(-50%, 0, 0); }
+.state-empty { text-align: center; padding: 26px 20px; color: var(--ink-mute); font-size: 0.9rem; line-height: 1.9; }
+.state-empty .ico-wrap { width: 48px; height: 48px; border-radius: 50%; margin: 0 auto 12px; display: grid; place-items: center; background: var(--cream-2); color: var(--gold-deep); }
+.state-empty strong { display: block; color: var(--green-deep); font-weight: 700; margin-bottom: 4px; font-size: 0.95rem; }
+.hidden { display: none !important; }
+.text-center { text-align: center; }
+@media (max-width: 360px) { .container { padding: 0 12px; } }
+
+/* ===== QUICK ACCESS ===== */
+.quick-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+.quick-card { display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 20px 14px; border-radius: var(--radius); background: var(--white); border: 1px solid var(--line); text-align: center; box-shadow: var(--shadow-xs); cursor: pointer; width: 100%; transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease-soft), border-color 0.25s var(--ease-soft); }
+.quick-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--line-strong); }
+.quick-card:active { transform: translateY(-1px) scale(0.99); }
+.quick-card .ico-wrap { width: 48px; height: 48px; border-radius: 14px; display: grid; place-items: center; background: var(--green-mist); color: var(--green); font-size: 1.4rem; transition: background-color 0.25s var(--ease-soft), color 0.25s var(--ease-soft); }
+.quick-card:hover .ico-wrap { background: var(--green); color: #fff; }
+.quick-card h4 { font-size: 0.92rem; font-weight: 700; color: var(--green-deep); }
+.quick-card p { font-size: 0.78rem; color: var(--ink-mute); line-height: 1.6; }
+
+/* ===== PAGE HEAD / BACK ===== */
+.back-to-home { display: inline-flex; align-items: center; gap: 8px; padding: 9px 18px; border-radius: 999px; background: var(--cream-2); color: var(--green-deep); font-weight: 700; font-size: 0.86rem; margin-top: 20px; transition: background-color 0.2s var(--ease-soft); }
+.back-to-home:hover { background: #eee6d6; }
+.back-to-home svg { width: 16px; height: 16px; }
+.page-head { padding: 28px 0 20px; text-align: center; }
+.page-head h1 { font-size: 1.55rem; font-weight: 900; color: var(--green-deep); margin-bottom: 8px; }
+.page-head p { color: var(--ink-soft); font-size: 0.94rem; max-width: 520px; margin: 0 auto; line-height: 1.85; }
+
+/* ===== EXAMS ===== */
+.exam-list { display: grid; gap: 14px; }
+.exam-card { background: var(--white); border-radius: var(--radius-lg); border: 1px solid var(--line); box-shadow: var(--shadow-sm); padding: 22px 20px; position: relative; overflow: hidden; transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease-soft); }
+.exam-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.exam-card::before { content: ''; position: absolute; top: 0; right: 0; bottom: 0; width: 4px; background: linear-gradient(180deg, var(--gold), var(--gold-deep)); }
+.exam-card.status-active::before { background: linear-gradient(180deg, #5cc47c, var(--success)); }
+.exam-card.status-ended::before { background: linear-gradient(180deg, #c7c0b2, #8a8a8a); }
+.exam-card.status-attempted::before { background: linear-gradient(180deg, #5b8aa8, #3f5f74); }
+.exam-card .status { display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; border-radius: 999px; font-size: 0.75rem; font-weight: 700; margin-bottom: 12px; }
+.exam-card .status.active { background: var(--success-soft); color: var(--success); }
+.exam-card .status.upcoming { background: var(--gold-mist); color: var(--gold-deep); }
+.exam-card .status.ended { background: var(--danger-soft); color: var(--danger); }
+.exam-card .status.attempted { background: #e0ecf2; color: #3f5f74; }
+.exam-card h3 { font-size: 1.05rem; font-weight: 800; color: var(--green-deep); margin-bottom: 10px; }
+.exam-card .meta { display: flex; gap: 14px; flex-wrap: wrap; font-size: 0.82rem; color: var(--ink-mute); margin-bottom: 14px; }
+.exam-card .meta span { display: inline-flex; align-items: center; gap: 5px; }
+.exam-card .desc { font-size: 0.9rem; color: var(--ink-soft); line-height: 1.85; margin-bottom: 16px; }
+.btn-exam { display: inline-flex; align-items: center; gap: 8px; padding: 11px 24px; border-radius: 999px; background: linear-gradient(135deg, var(--green), var(--green-deep)); color: #fff; font-weight: 700; font-size: 0.9rem; box-shadow: 0 8px 20px rgba(45, 106, 79, 0.22); min-height: 44px; transition: transform 0.22s var(--ease), box-shadow 0.22s var(--ease); }
+.btn-exam:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(45, 106, 79, 0.3); }
+.btn-exam:disabled { opacity: 0.45; cursor: not-allowed; box-shadow: none; }
+.btn-exam.ghost { background: var(--white); color: var(--green-deep); border: 1.5px solid #e8e0d0; box-shadow: none; }
+
+/* Exam taking */
+.exam-taking { position: fixed; inset: 0; z-index: 2000; background: var(--cream); overflow-y: auto; padding: 16px; display: none; }
+.exam-taking.is-open { display: block; }
+.exam-taking-inner { max-width: 820px; margin: 0 auto; }
+.exam-topbar { position: sticky; top: 0; background: rgba(252, 248, 240, 0.97); backdrop-filter: blur(14px); border-radius: var(--radius); padding: 14px 18px; margin-bottom: 16px; z-index: 10; display: flex; align-items: center; gap: 12px; box-shadow: 0 4px 20px rgba(30, 58, 47, 0.08); border: 1px solid var(--line); flex-wrap: wrap; }
+.exam-timer { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; border-radius: 999px; background: var(--green-mist); color: var(--green); font-weight: 800; font-size: 0.95rem; font-variant-numeric: tabular-nums; min-width: 110px; justify-content: center; }
+.exam-timer.warning { background: var(--danger-soft); color: var(--danger); animation: pulse-timer 1s infinite; }
+@keyframes pulse-timer { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
+.exam-progress { flex: 1; height: 6px; border-radius: 999px; background: rgba(201, 169, 110, 0.2); overflow: hidden; min-width: 100px; }
+.exam-progress-fill { height: 100%; background: linear-gradient(90deg, var(--gold), var(--green)); border-radius: 999px; transition: width 0.4s; }
+.exam-q-count { font-size: 0.82rem; color: var(--ink-soft); font-weight: 700; white-space: nowrap; }
+.exam-q-card { background: #fff; border-radius: var(--radius-lg); padding: 28px 24px; box-shadow: var(--shadow-md); border: 1px solid var(--line); margin-bottom: 16px; }
+.exam-q-num { display: inline-flex; align-items: center; gap: 8px; padding: 5px 14px; border-radius: 999px; background: var(--green-mist); color: var(--green); font-size: 0.8rem; font-weight: 800; margin-bottom: 16px; }
+.exam-q-text { font-size: 1.1rem; font-weight: 700; color: var(--green-deep); line-height: 1.9; margin-bottom: 20px; }
+.exam-options { display: grid; gap: 10px; }
+.exam-option { display: flex; align-items: center; gap: 12px; padding: 16px; border-radius: var(--radius-sm); background: #fff; border: 2px solid #e8e0d0; cursor: pointer; text-align: right; width: 100%; font-size: 0.96rem; font-weight: 500; color: var(--ink); transition: border-color 0.2s, background-color 0.2s; }
+.exam-option:hover { border-color: var(--gold); background: #fffcf5; }
+.exam-option.is-selected { border-color: var(--green); background: var(--green-mist); }
+.exam-option .radio { width: 26px; height: 26px; border-radius: 50%; border: 2px solid #d4cbb8; flex: 0 0 auto; display: grid; place-items: center; transition: border-color 0.2s, background-color 0.2s; }
+.exam-option.is-selected .radio { border-color: var(--green); background: var(--green); }
+.exam-option.is-selected .radio::after { content: ''; width: 10px; height: 10px; border-radius: 50%; background: #fff; }
+.exam-option .letter { width: 28px; height: 28px; border-radius: 8px; background: var(--cream-2); color: var(--green-deep); display: grid; place-items: center; font-weight: 800; font-size: 0.82rem; flex: 0 0 auto; }
+.exam-nav { position: sticky; bottom: 0; background: rgba(252, 248, 240, 0.97); backdrop-filter: blur(14px); border-radius: var(--radius); padding: 14px 18px; margin-top: 16px; display: flex; align-items: center; justify-content: space-between; gap: 12px; box-shadow: 0 -4px 20px rgba(30, 58, 47, 0.08); border: 1px solid var(--line); flex-wrap: wrap; }
+.exam-nav-btns { display: flex; gap: 8px; flex-wrap: wrap; }
+.btn-exam-nav { display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; border-radius: 999px; background: var(--cream-2); color: var(--green-deep); font-weight: 700; font-size: 0.86rem; min-height: 42px; }
+.btn-exam-nav:hover { background: #eee6d6; }
+.btn-exam-nav:disabled { opacity: 0.4; cursor: not-allowed; }
+.btn-exam-finish { background: linear-gradient(135deg, var(--danger), #8a2929); color: #fff; box-shadow: 0 8px 20px rgba(178, 59, 59, 0.25); }
+.exam-q-dots { display: flex; gap: 6px; flex-wrap: wrap; justify-content: center; margin-bottom: 14px; }
+.exam-q-dot { width: 32px; height: 32px; border-radius: 10px; background: #fff; border: 1.5px solid #e8e0d0; font-weight: 700; font-size: 0.78rem; color: var(--ink-soft); display: grid; place-items: center; transition: all 0.2s; }
+.exam-q-dot.answered { background: var(--green-mist); border-color: var(--green); color: var(--green); }
+.exam-q-dot.current { background: var(--green); color: #fff; border-color: var(--green); transform: scale(1.08); }
+.exam-result-screen { background: #fff; border-radius: var(--radius-lg); padding: 32px 24px; box-shadow: var(--shadow-md); text-align: center; }
+.exam-result-circle { width: 140px; height: 140px; border-radius: 50%; margin: 0 auto 20px; background: conic-gradient(var(--green) var(--pct, 0%), rgba(201, 169, 110, 0.18) 0%); position: relative; display: grid; place-items: center; }
+.exam-result-circle::before { content: ''; position: absolute; inset: 10px; border-radius: 50%; background: #fff; }
+.exam-result-circle.low { background: conic-gradient(var(--danger) var(--pct, 0%), rgba(201, 169, 110, 0.18) 0%); }
+.exam-result-inner { position: relative; z-index: 1; }
+.exam-result-num { font-size: 2.2rem; font-weight: 900; color: var(--green-deep); line-height: 1; }
+.exam-result-lbl { font-size: 0.78rem; color: var(--ink-mute); margin-top: 4px; font-weight: 600; }
+.exam-result-screen h2 { font-size: 1.4rem; font-weight: 800; color: var(--green-deep); margin-bottom: 8px; }
+.exam-result-screen p { color: var(--ink-soft); font-size: 0.94rem; line-height: 1.9; max-width: 460px; margin: 0 auto 20px; }
+.answer-review { display: grid; gap: 10px; margin-top: 20px; text-align: right; }
+.answer-review-item { background: #fff; border-radius: var(--radius-sm); border: 1px solid var(--line); padding: 14px 16px; }
+.answer-review-item.ok { border-right: 3px solid var(--success); background: rgba(216, 237, 223, 0.4); }
+.answer-review-item.err { border-right: 3px solid var(--danger); background: rgba(246, 222, 222, 0.4); }
+.answer-review-item .q { font-weight: 700; color: var(--green-deep); font-size: 0.92rem; margin-bottom: 8px; line-height: 1.8; }
+.answer-review-item .a { font-size: 0.84rem; color: var(--ink-soft); line-height: 1.85; }
+.answer-review-item .a strong { color: var(--green); }
+.answer-review-item .a .wrong { color: var(--danger); text-decoration: line-through; }
+
+/* ===== GAMES ===== */
+.game-tabs { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-bottom: 24px; }
+.game-tab { display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; border-radius: 999px; background: var(--white); border: 1.5px solid #e8e0d0; color: var(--ink-soft); font-weight: 700; font-size: 0.88rem; min-height: 44px; transition: all 0.22s var(--ease-soft); }
+.game-tab:hover { border-color: var(--gold); color: var(--green-deep); transform: translateY(-2px); box-shadow: 0 6px 16px rgba(201, 169, 110, 0.15); }
+.game-tab.is-active { background: linear-gradient(135deg, var(--green), var(--green-deep)); border-color: var(--green-deep); color: #fff; box-shadow: 0 8px 20px rgba(45, 106, 79, 0.22); }
+.game-tab .emoji { font-size: 1.1rem; }
+.game-shell { background: var(--white); border-radius: var(--radius-lg); border: 1px solid var(--line); box-shadow: var(--shadow-md); padding: 24px 20px; min-height: 400px; }
+.game-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 18px; }
+.game-stats { display: flex; gap: 16px; flex-wrap: wrap; font-size: 0.88rem; color: var(--ink-soft); font-weight: 600; }
+.game-stats b { color: var(--green-deep); font-weight: 900; font-size: 1.05rem; }
+.btn-game { display: inline-flex; align-items: center; gap: 6px; padding: 9px 20px; border-radius: 999px; background: linear-gradient(135deg, var(--green), var(--green-deep)); color: #fff; font-weight: 700; font-size: 0.86rem; min-height: 42px; transition: transform 0.22s, box-shadow 0.22s; }
+.btn-game:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(45, 106, 79, 0.28); }
+.btn-game.ghost { background: var(--white); color: var(--green-deep); border: 1.5px solid #e8e0d0; }
+.plinko-wrap { display: grid; place-items: center; padding: 10px; }
+.plinko-canvas { width: 100%; max-width: 340px; aspect-ratio: 3/4; border-radius: var(--radius); background: #f8f4eb; border: 1px solid var(--line); display: block; }
+.guess-wrap { display: grid; place-items: center; padding: 20px 10px; text-align: center; }
+.guess-input { width: 120px; padding: 12px 16px; border-radius: 14px; border: 2px solid #e8e0d0; background: #fff; font-size: 1.3rem; font-weight: 800; text-align: center; color: var(--green-deep); }
+.guess-input:focus { outline: none; border-color: var(--gold); }
+.guess-msg { font-size: 1rem; font-weight: 700; margin: 16px 0; min-height: 30px; color: var(--green-deep); }
+.guess-msg.low { color: #c97a2b; }
+.guess-msg.high { color: #b23b3b; }
+.guess-msg.win { color: var(--green); font-size: 1.15rem; }
+.guess-actions { display: flex; gap: 10px; justify-content: center; margin-top: 16px; flex-wrap: wrap; }
+.memory-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; max-width: 380px; margin: 0 auto; }
+.memory-card { aspect-ratio: 1/1; border-radius: 12px; background: linear-gradient(135deg, var(--green), var(--green-deep)); color: #fff; display: grid; place-items: center; font-size: clamp(1.3rem, 4vw, 1.8rem); cursor: pointer; position: relative; user-select: none; box-shadow: 0 4px 12px rgba(45, 106, 79, 0.15); }
+.memory-card .face { position: absolute; inset: 0; display: grid; place-items: center; border-radius: 12px; transition: opacity 0.3s; }
+.memory-card .back { background: linear-gradient(135deg, var(--green), var(--green-deep)); opacity: 1; }
+.memory-card .back::before { content: '✦'; font-size: 1.1rem; opacity: 0.7; }
+.memory-card .front { background: #fff; border: 1.5px solid var(--gold); opacity: 0; }
+.memory-card.is-flipped .back { opacity: 0; }
+.memory-card.is-flipped .front { opacity: 1; }
+.memory-card.is-matched { box-shadow: 0 0 0 2px var(--gold); }
+.memory-card.is-matched .front { background: var(--gold-mist); }
+.reaction-area { display: grid; place-items: center; padding: 20px 10px; }
+.reaction-box { width: 100%; max-width: 380px; aspect-ratio: 16/10; border-radius: var(--radius); background: linear-gradient(135deg, #e8e0d0, #d9d0bd); display: grid; place-items: center; text-align: center; padding: 20px; cursor: pointer; user-select: none; box-shadow: var(--shadow-md); transition: background 0.15s, transform 0.15s; }
+.reaction-box.ready { background: linear-gradient(135deg, #4caf7c, #2d6a4f); color: #fff; }
+.reaction-box.tooSoon { background: linear-gradient(135deg, #e57373, #b23b3b); color: #fff; }
+.reaction-box .big-text { font-size: clamp(1.2rem, 3.5vw, 1.8rem); font-weight: 800; line-height: 1.5; }
+.reaction-box .sub-text { font-size: 0.85rem; opacity: 0.85; margin-top: 6px; }
+.game-hint { text-align: center; font-size: 0.84rem; color: var(--ink-mute); margin-top: 16px; line-height: 1.8; }
+
+/* ===== NUMBER MEMORY GAME ===== */
+.nummem-wrap { max-width: 500px; margin: 0 auto; text-align: center; }
+.nummem-display { background: radial-gradient(circle at 50% 30%, #fffdf8, #fbf6ec); border: 2px solid var(--line); border-radius: var(--radius-lg); padding: 28px 20px; margin-bottom: 16px; position: relative; overflow: hidden; min-height: 130px; display: grid; place-items: center; }
+.nummem-display::before { content: ''; position: absolute; inset: 8px; border: 1px solid rgba(201, 169, 110, 0.35); border-radius: calc(var(--radius-lg) - 8px); pointer-events: none; }
+.nummem-seq { font-family: 'Amiri Quran', monospace; font-size: clamp(1.5rem, 5.5vw, 2.6rem); font-weight: 900; color: var(--green-deep); letter-spacing: 0.3rem; line-height: 1.5; direction: ltr; word-break: break-all; min-height: 1.5em; }
+.nummem-status { font-size: 1rem; font-weight: 700; color: var(--green-deep); margin-bottom: 10px; min-height: 24px; }
+.nummem-input { font-size: clamp(1.3rem, 4.5vw, 1.9rem); font-weight: 900; color: var(--green-deep); letter-spacing: 0.3rem; min-height: 60px; font-family: monospace; direction: ltr; margin-bottom: 16px; padding: 10px 14px; border-radius: 12px; background: var(--cream-2); border: 2px dashed var(--line); word-break: break-all; display: flex; align-items: center; justify-content: center; transition: background-color 0.2s, border-color 0.2s; }
+.nummem-input.correct { background: var(--success-soft); border-color: var(--success); border-style: solid; }
+.nummem-input.wrong { background: var(--danger-soft); border-color: var(--danger); border-style: solid; animation: nmShake 0.3s; }
+@keyframes nmShake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-8px); } 75% { transform: translateX(8px); } }
+.nummem-pad { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; max-width: 320px; margin: 0 auto; }
+.nummem-btn { aspect-ratio: 1/1; border-radius: 16px; background: #fff; border: 1.5px solid var(--line); font-size: clamp(1.4rem, 5vw, 1.9rem); font-weight: 900; color: var(--green-deep); transition: all 0.15s; font-family: monospace; }
+.nummem-btn:hover:not(:disabled) { background: var(--green-mist); border-color: var(--green); transform: scale(1.05); }
+.nummem-btn:active:not(:disabled) { transform: scale(0.95); background: var(--green); color: #fff; }
+.nummem-btn:disabled { opacity: 0.35; cursor: not-allowed; transform: none; }
+.nummem-result { background: #fff; border-radius: var(--radius-lg); padding: 20px; text-align: center; margin-top: 16px; border: 2px solid var(--line); }
+.nummem-result.win { border-color: var(--success); background: linear-gradient(180deg, #fff, var(--success-soft)); }
+.nummem-result.lose { border-color: var(--danger); background: linear-gradient(180deg, #fff, var(--danger-soft)); }
+.nummem-result h3 { font-size: 1.2rem; font-weight: 900; margin-bottom: 6px; }
+.nummem-result.win h3 { color: var(--success); }
+.nummem-result.lose h3 { color: var(--danger); }
+.nummem-result p { font-size: 0.88rem; color: var(--ink-soft); line-height: 1.8; }
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="header" id="siteHeader">
+  <div class="header-inner">
+    <div class="header-right">
+      <button class="icon-btn" id="openMenu" aria-label="منو" aria-expanded="false">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="14" y2="17"/></svg>
+      </button>
+      <a href="#home" class="brand" data-nav="home">
+        <span class="brand-mark"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 L14 9 L21 9 L15.5 13.5 L17.5 21 L12 16.5 L6.5 21 L8.5 13.5 L3 9 L10 9 Z"/></svg></span>
+        <span class="brand-title">پیروان حضرت مهدی<span class="tag">(عج)</span></span>
+      </a>
+    </div>
+    <div class="header-left">
+      <button class="bell-btn" id="bellBtn" aria-label="اطلاعیه‌ها">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+        <span class="badge" id="bellBadge">۰</span>
+      </button>
+      <button class="btn-login" id="openLogin">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+        ورود
+      </button>
+      <div class="user-menu" id="userMenu">
+        <button class="user-avatar-btn" id="userAvatarBtn" aria-label="حساب کاربری" aria-expanded="false"><span id="userAvatarText">؟</span></button>
+        <div class="user-dropdown" id="userDropdown">
+          <div class="user-dropdown-head">
+            <div class="avatar-lg" id="dropdownAvatar">؟</div>
+            <div>
+              <div class="name" id="dropdownName">—</div>
+              <div class="meta"><span class="group-chip" id="dropdownGroup">—</span></div>
+            </div>
+          </div>
+          <div class="user-dropdown-section">
+            <div class="user-dropdown-title"><span>📊 نتایج آزمون‌ها</span><span class="count" id="resultsCount">۰</span></div>
+            <div class="exam-results-list" id="examResultsList"></div>
+          </div>
+          <div class="user-dropdown-actions">
+            <button class="dropdown-action danger" id="clearResultsBtn" type="button">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+              پاک کردن نتایج
+            </button>
+            <button class="dropdown-action" id="logoutDropdownBtn" type="button">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+              خروج از حساب
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="dropdown-overlay" id="dropdownOverlay"></div>
+
+<!-- ============ DRAWER ============ -->
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer">
+  <div class="drawer-head">
+    <div class="drawer-brand">
+      <span class="brand-mark"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 L14 9 L21 9 L15.5 13.5 L17.5 21 L12 16.5 L6.5 21 L8.5 13.5 L3 9 L10 9 Z"/></svg></span>
+      پیروان حضرت مهدی(عج)
+    </div>
+    <button class="icon-btn" id="closeMenu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg></button>
+  </div>
+  <div class="drawer-body">
+    <div class="drawer-group-title">بخش‌های اصلی</div>
+    <a href="#home" class="drawer-link" data-nav="home" data-close-drawer><span class="ico">🏠</span> خانه <span class="arrow">‹</span></a>
+    <a href="#notifications" class="drawer-link" data-close-drawer><span class="ico">🔔</span> اطلاعیه‌ها <span class="arrow">‹</span></a>
+    <a href="#zekr" class="drawer-link" data-close-drawer><span class="ico">📿</span> ذکر روز <span class="arrow">‹</span></a>
+    <a href="#ayah" class="drawer-link" data-close-drawer><span class="ico">📖</span> آیات قرآن <span class="arrow">‹</span></a>
+    <a href="#gallery" class="drawer-link" data-close-drawer><span class="ico">🖼</span> گالری <span class="arrow">‹</span></a>
+    <a href="#exams" class="drawer-link" data-nav="exams" data-close-drawer><span class="ico">📝</span> آزمون‌ها <span class="arrow">‹</span></a>
+    <a href="#games" class="drawer-link" data-nav="games" data-close-drawer><span class="ico">🎮</span> بازی‌ها <span class="arrow">‹</span></a>
+    <div class="drawer-group-title">دانش‌آموزی</div>
+    <a href="#student" class="drawer-link" data-close-drawer data-open-login><span class="ico">🔐</span> ورود دانش‌آموز <span class="arrow">‹</span></a>
+  </div>
+  <div class="drawer-foot"><strong>پیروان حضرت مهدی(عج)</strong><br>با یاد او، دل‌ها آرام می‌گیرد.</div>
+</aside>
+
+<!-- ============ MAIN ============ -->
+<main>
+
+<!-- PAGE: HOME -->
+<div class="page is-active" id="page-home" data-page="home">
+  <section class="hero container">
+    <div class="bismillah-wrap reveal">
+      <svg class="bismillah-flourish left" viewBox="0 0 84 22" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"><path d="M2 11 C 18 11, 28 2, 46 11 C 58 17, 70 11, 82 11"/><circle cx="82" cy="11" r="1.8" fill="currentColor"/><circle cx="2" cy="11" r="1.8" fill="currentColor"/></svg>
+      <svg class="bismillah-flourish right" viewBox="0 0 84 22" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"><path d="M2 11 C 18 11, 28 2, 46 11 C 58 17, 70 11, 82 11"/><circle cx="82" cy="11" r="1.8" fill="currentColor"/><circle cx="2" cy="11" r="1.8" fill="currentColor"/></svg>
+      <div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+    </div>
+    <p class="hero-sub reveal">در مسیر انتظار، دل‌ها را با یاد خدا روشن نگه داریم.</p>
+    <svg class="hero-ornament reveal" viewBox="0 0 200 16" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"><path d="M2 8 H62"/><path d="M138 8 H198"/><path d="M82 8 L100 1 L118 8 L100 15 Z"/><circle cx="100" cy="8" r="2.3" fill="currentColor"/><circle cx="72" cy="8" r="1.5" fill="currentColor"/><circle cx="128" cy="8" r="1.5" fill="currentColor"/></svg>
+  </section>
+
+  <section class="notif-section container" id="notifications">
+    <div class="sec-head reveal"><span class="marker"></span><h2>خبر و اطلاعیه</h2><span class="hint" id="notifHint"></span></div>
+    <div id="notifFeatured"></div>
+    <div class="notif-strip reveal" id="notifStrip"></div>
+  </section>
+
+  <section class="section-gap container" id="zekr">
+    <div class="sec-head reveal"><span class="marker"></span><h2>ذکر امروز</h2><span class="hint" id="zekrDateHint"></span></div>
+    <div class="zekr-card reveal">
+      <svg class="zekr-corner tl" viewBox="0 0 42 42" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"><path d="M4 18 C 4 10, 10 4, 18 4"/><path d="M10 20 C 10 14, 14 10, 20 10"/><circle cx="7" cy="7" r="2" fill="currentColor"/></svg>
+      <svg class="zekr-corner tr" viewBox="0 0 42 42" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"><path d="M4 18 C 4 10, 10 4, 18 4"/><path d="M10 20 C 10 14, 14 10, 20 10"/><circle cx="7" cy="7" r="2" fill="currentColor"/></svg>
+      <svg class="zekr-corner bl" viewBox="0 0 42 42" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"><path d="M4 18 C 4 10, 10 4, 18 4"/><path d="M10 20 C 10 14, 14 10, 20 10"/><circle cx="7" cy="7" r="2" fill="currentColor"/></svg>
+      <svg class="zekr-corner br" viewBox="0 0 42 42" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"><path d="M4 18 C 4 10, 10 4, 18 4"/><path d="M10 20 C 10 14, 14 10, 20 10"/><circle cx="7" cy="7" r="2" fill="currentColor"/></svg>
+      <div class="zekr-badge"><span class="dot"></span><span id="zekrDay">—</span></div>
+      <div class="zekr-day" id="zekrGreeting">ذکر امروز شما</div>
+      <div class="zekr-text" id="zekrText">…</div>
+      <svg class="zekr-divider" viewBox="0 0 120 12" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"><path d="M2 6 H42"/><path d="M78 6 H118"/><path d="M52 6 L60 1 L68 6 L60 11 Z"/><circle cx="60" cy="6" r="1.6" fill="currentColor"/></svg>
+      <p class="zekr-note" id="zekrNote">با یاد خدا، دل‌ها آرام می‌گیرد.</p>
+    </div>
+  </section>
+
+  <section class="section-gap container" id="ayah">
+    <div class="sec-head reveal"><span class="marker"></span><h2>آیه امروز</h2><span class="hint">کلام نور</span></div>
+    <div class="card ayah-card has-corners reveal">
+      <div class="ayah-meta">
+        <span class="ayah-chip">سوره <span id="surahName">—</span></span>
+        <span class="ayah-chip gold">آیه <span id="ayahNumber">—</span></span>
+      </div>
+      <div class="ayah-text" id="ayahText">…</div>
+      <div class="ayah-trans"><span class="lbl">ترجمه:</span> <span id="ayahTranslation">…</span></div>
+      <div class="ayah-actions">
+        <button class="ayah-action" id="ayahCopy">📋 کپی</button>
+        <button class="ayah-action" id="ayahShare">📤 اشتراک</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-gap container" id="gallery">
+    <div class="sec-head reveal"><span class="marker"></span><h2>گالری پوسترها</h2><span class="hint" id="galleryCounter">—</span></div>
+    <div class="card gallery-card has-corners reveal">
+      <div class="slider" id="slider">
+        <div class="slider-track" id="sliderTrack"></div>
+        <button class="slider-nav prev" id="slidePrev" aria-label="قبلی"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>
+        <button class="slider-nav next" id="slideNext" aria-label="بعدی"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
+      </div>
+      <div class="slider-dots" id="sliderDots"></div>
+    </div>
+  </section>
+
+  <section class="section-gap container">
+    <div class="sec-head reveal"><span class="marker"></span><h2>امروز در مسیر ایمان</h2></div>
+    <div class="card inspire-card reveal">
+      <div class="glyph">✦</div>
+      <div class="body">
+        <div class="label" id="inspireLabel">یادآوری امروز</div>
+        <p class="quote" id="inspireQuote">…</p>
+        <div class="author" id="inspireAuthor"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-gap container">
+    <div class="sec-head reveal"><span class="marker"></span><h2>دسترسی سریع</h2></div>
+    <div class="quick-grid reveal">
+      <button class="quick-card" data-nav="exams"><span class="ico-wrap">📝</span><h4>آزمون‌ها</h4><p>شرکت در آزمون</p></button>
+      <button class="quick-card" data-nav="games"><span class="ico-wrap">🎮</span><h4>بازی‌ها</h4><p>سرگرمی و چالش</p></button>
+      <a href="#gallery" class="quick-card"><span class="ico-wrap">🖼</span><h4>گالری</h4><p>پوسترها</p></a>
+      <button class="quick-card" id="quickLogin"><span class="ico-wrap">👤</span><h4>ورود</h4><p>پنل دانش‌آموزی</p></button>
+    </div>
+  </section>
+
+  <section class="section-gap container" id="student">
+    <div class="sec-head reveal"><span class="marker"></span><h2>محتوای اختصاصی گروه شما</h2></div>
+    <div class="card student-card has-corners reveal" id="studentGuest">
+      <div class="icon-badge">🔐</div>
+      <h3>ورود به محتوای گروه</h3>
+      <p>برای مشاهده پوسترها، آزمون‌ها و محتوای اختصاصی گروه خود، کد دانش‌آموزی‌ات را وارد کن.</p>
+      <button class="btn btn-primary" id="openLoginFromCard">ورود با کد دانش‌آموزی</button>
+    </div>
+    <div class="student-logged" id="studentPanel">
+      <div class="student-header">
+        <div class="student-avatar" id="studentAvatar">؟</div>
+        <div class="student-info"><div class="name" id="studentName">—</div><div class="meta" id="studentMeta">—</div></div>
+        <button class="btn-logout" id="logoutBtn">خروج</button>
+      </div>
+      <div class="card has-corners" style="text-align:right;">
+        <div class="sec-head" style="margin-bottom:10px;"><span class="marker"></span><h2 style="font-size:0.98rem;">محتوای گروه شما</h2></div>
+        <p style="color:var(--ink-soft);font-size:0.92rem;line-height:1.9;">پوسترها، اطلاعیه‌ها و آزمون‌های گروه <strong id="studentGroupInline" style="color:var(--green)">—</strong> در این بخش نمایش داده می‌شوند.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-gap container">
+    <div class="sec-head reveal"><span class="marker"></span><h2>سوالات متداول</h2></div>
+    <div class="card has-corners reveal">
+      <div class="faq-item"><button class="faq-q" type="button"><span>چطور وارد محتوای گروه خودم بشم؟</span><svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-a">از دکمه «ورود» در بالای صفحه استفاده کن و کد اختصاصی دانش‌آموزی‌ات رو وارد کن.</div></div>
+      <div class="faq-item"><button class="faq-q" type="button"><span>آزمون‌ها کجا برگزار می‌شن؟</span><svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-a">در صفحه «آزمون‌ها» که از منوی سه‌خط قابل دسترسیه. هر آزمون فقط برای گروه شما نمایش داده می‌شه.</div></div>
+      <div class="faq-item"><button class="faq-q" type="button"><span>هر آزمون چند بار می‌تونم شرکت کنم؟</span><svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-a">هر آزمون فقط یک بار. بعد از ارسال، نتیجه ثبت می‌شه.</div></div>
+      <div class="faq-item"><button class="faq-q" type="button"><span>اگه زمان تموم بشه چی می‌شه؟</span><svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-a">پاسخ‌ها به صورت خودکار ارسال و نتیجه ثبت می‌شه.</div></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand"><span class="brand-mark"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 L14 9 L21 9 L15.5 13.5 L17.5 21 L12 16.5 L6.5 21 L8.5 13.5 L3 9 L10 9 Z"/></svg></span>پیروان حضرت مهدی(عج)</div>
+          <p class="footer-desc">پلتفرمی برای همراهی نوجوانان در مسیر انتظار؛ با ذکر روزانه، آیات قرآن، اطلاعیه‌ها، محتوای گروهی و آزمون‌های معنوی.</p>
+        </div>
+        <div>
+          <h4>دسترسی</h4>
+          <ul>
+            <li><a href="#notifications">اطلاعیه‌ها</a></li>
+            <li><a href="#zekr">ذکر روز</a></li>
+            <li><a href="#gallery">گالری</a></li>
+            <li><a href="#exams" data-nav="exams">آزمون‌ها</a></li>
+            <li><a href="#games" data-nav="games">بازی‌ها</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>دانش‌آموزی</h4>
+          <ul>
+            <li><a href="#student">ورود با کد اختصاصی</a></li>
+            <li><a href="#student">محتوای گروه</a></li>
+            <li><a href="#exams" data-nav="exams">آزمون‌ها و نتایج</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© ۱۴۰۵ پیروان حضرت مهدی(عج)</span>
+        <span class="sep">✦</span>
+        <span>با یاد او، دل‌ها آرام می‌گیرد</span>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- PAGE: EXAMS -->
+<div class="page" id="page-exams" data-page="exams">
+  <div class="container">
+    <button class="back-to-home" data-nav="home">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      بازگشت به خانه
+    </button>
+    <div class="page-head">
+      <h1>آزمون‌های معارف</h1>
+      <p>آزمون‌های مخصوص گروه شما. هر آزمون فقط یک بار قابل شرکت است.</p>
+    </div>
+    <div class="exam-list" id="examsList"></div>
+  </div>
+</div>
+
+<!-- PAGE: GAMES -->
+<div class="page" id="page-games" data-page="games">
+  <div class="container">
+    <button class="back-to-home" data-nav="home">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      بازگشت به خانه
+    </button>
+    <div class="page-head">
+      <h1>وقتت رو با بازی پر کن</h1>
+      <p>پنج بازی جذاب و چالشی. یکی رو انتخاب کن و شروع کن!</p>
+    </div>
+    <div class="game-tabs" role="tablist">
+      <button class="game-tab is-active" data-game="nummem" type="button"><span class="emoji">🔢</span> حافظه عددی</button>
+      <button class="game-tab" data-game="plinko" type="button"><span class="emoji">🎯</span> پلینکو</button>
+      <button class="game-tab" data-game="guess" type="button"><span class="emoji">❓</span> حدس عدد</button>
+      <button class="game-tab" data-game="memory" type="button"><span class="emoji">🧠</span> جفت‌یابی</button>
+      <button class="game-tab" data-game="reaction" type="button"><span class="emoji">⚡</span> واکنش سریع</button>
+    </div>
+    <div class="game-shell" id="gameShell"></div>
+  </div>
+</div>
+
+</main>
+
+<!-- EXAM TAKING -->
+<div class="exam-taking" id="examTaking">
+  <div class="exam-taking-inner" id="examTakingMount"></div>
+</div>
+
+<!-- LOGIN MODAL -->
+<div class="modal" id="loginModal">
+  <div class="modal-box">
+    <button class="modal-close" id="closeLogin"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg></button>
+    <div class="modal-icon">🔐</div>
+    <h3>ورود دانش‌آموز</h3>
+    <p class="sub">کد اختصاصی خودت را وارد کن تا وارد محتوای گروه خودت بشوی.</p>
+    <label class="field-label" for="studentCode">کد دانش‌آموزی</label>
+    <input class="field-input" id="studentCode" type="text" placeholder="XXXX-XXXX-XXXX" autocomplete="off" maxlength="20" />
+    <div class="modal-actions">
+      <button class="btn btn-ghost" id="cancelLogin">انصراف</button>
+      <button class="btn btn-primary" id="submitLogin">ورود</button>
+    </div>
+    <div class="form-msg" id="loginMsg"></div>
+  </div>
+</div>
+
+<!-- NOTIF MODAL -->
+<div class="modal" id="notifModal">
+  <div class="modal-box wide">
+    <button class="modal-close" id="closeNotif"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg></button>
+    <div id="notifModalContent"></div>
+  </div>
+</div>
+
+<!-- CONFIRM FINISH MODAL -->
+<div class="modal" id="confirmFinishModal">
+  <div class="modal-box">
+    <div class="modal-icon" style="background:linear-gradient(135deg,var(--danger),#8a2929)">⚠️</div>
+    <h3>اتمام آزمون</h3>
+    <p class="sub" id="finishMsg"></p>
+    <div class="modal-actions">
+      <button class="btn btn-ghost" id="cancelFinish">ادامه می‌دهم</button>
+      <button class="btn btn-primary" id="confirmFinish" style="background:linear-gradient(135deg,var(--danger),#8a2929)">اتمام و ارسال</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+(function () {
+  'use strict';
+  const $ = (id) => document.getElementById(id);
+  const $$ = (sel, root) => (root || document).querySelectorAll(sel);
+  function safe(fn) { return function () { try { return fn.apply(this, arguments); } catch (err) { console.warn('[app]', err); } }; }
+  function toFa(n) { const fa = ['۰','۱','۲','۳','۴','۵','۶','۷','۸','۹']; return String(n == null ? '' : n).replace(/\d/g, d => fa[+d]); }
+  function escapeHtml(str) { return String(str == null ? '' : str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;'); }
+
+  /* ===== STORE ===== */
+  const Store = (() => {
+    const K = { students: 'pm_students', exams: 'pm_exams', results: 'pm_results', groups: 'pm_groups', session: 'pm_session' };
+    const seed = {
+      groups: [
+        { id: 'nouri7', name: 'نوری ۷' },
+        { id: 'nouri8', name: 'نوری ۸' },
+        { id: 'nouri9', name: 'نوری ۹' }
+      ],
+      students: [
+        { code: 'N7A1-1111-AAAA', name: 'دانش‌آموز نوری ۷', groupId: 'nouri7' },
+        { code: 'N8B2-2222-BBBB', name: 'علی رضایی',       groupId: 'nouri8' },
+        { code: 'N9C3-3333-CCCC', name: 'دانش‌آموز نوری ۹', groupId: 'nouri9' }
+      ],
+      exams: [
+        { id: 'exam-mahdavi-n8', title: 'آزمون معارف مهدوی', groupId: 'nouri8', startAt: new Date(Date.now() - 5 * 60 * 1000).toISOString(), endAt: new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString(), durationMin: 15,
+          questions: [
+            { type: 'multiple', q: 'امام زمان(عج) در چه سالی متولد شدند؟', options: ['۲۲۰ هجری', '۲۵۵ هجری', '۳۰۰ هجری', '۲۴۰ هجری'], correct: 1, explanation: 'در سال ۲۵۵ هجری قمری در سامرا متولد شدند.' },
+            { type: 'multiple', q: 'نام مادر بزرگوار حضرت مهدی(عج) چیست؟', options: ['فاطمه', 'نرجس', 'خدیجه', 'زهرا'], correct: 1, explanation: 'نام مادر ایشان نرجس خاتون است.' },
+            { type: 'multiple', q: 'دعای «اللهم عجل لولیک الفرج» برای چه هدفی خوانده می‌شود؟', options: ['بارش باران', 'تعجیل در ظهور', 'شفای بیماران', 'شکرگزاری'], correct: 1, explanation: 'برای تعجیل در ظهور حضرت ولی‌عصر(عج).' },
+            { type: 'multiple', q: 'غیبت صغری چند سال طول کشید؟', options: ['۵ سال', '۱۰ سال', '۷۰ سال', '۲۰ سال'], correct: 2, explanation: 'حدود ۷۰ سال.' },
+            { type: 'boolean',  q: 'سوره توبه با بسم‌الله آغاز می‌شود.', options: ['درست', 'غلط'], correct: 1, explanation: 'سوره توبه تنها سوره‌ای است که با بسم‌الله آغاز نمی‌شود.' }
+          ]
+        },
+        { id: 'exam-quran-n7', title: 'آزمون سوره‌شناسی', groupId: 'nouri7', startAt: new Date(Date.now() + 60 * 60 * 1000).toISOString(), endAt: new Date(Date.now() + 25 * 60 * 60 * 1000).toISOString(), durationMin: 20,
+          questions: [
+            { type: 'multiple', q: 'اولین سوره قرآن کدام است؟', options: ['بقره', 'حمد', 'علق', 'ناس'], correct: 1, explanation: 'سوره حمد (فاتحه).' },
+            { type: 'multiple', q: 'قرآن چند جزء دارد؟', options: ['۲۰', '۳۰', '۴۰', '۶۰'], correct: 1, explanation: 'قرآن ۳۰ جزء دارد.' }
+          ]
+        }
+      ],
+      results: []
+    };
+    const get = (k, fb) => { try { const v = localStorage.getItem(k); return v === null ? fb : JSON.parse(v); } catch (e) { return fb; } };
+    const set = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); return true; } catch (e) { return false; } };
+    if (get(K.groups, null) === null) set(K.groups, seed.groups);
+    if (get(K.students, null) === null) set(K.students, seed.students);
+    if (get(K.exams, null) === null) set(K.exams, seed.exams);
+    if (get(K.results, null) === null) set(K.results, seed.results);
+    return {
+      K,
+      groups: () => get(K.groups, []),
+      students: () => get(K.students, []),
+      exams: () => get(K.exams, []),
+      results: () => get(K.results, []),
+      saveResults: (arr) => set(K.results, arr),
+      addResult: (r) => { const arr = get(K.results, []); arr.unshift(r); set(K.results, arr); },
+      hasAttempted: (code, examId) => get(K.results, []).some(r => r.studentId === code && r.examId === examId),
+      getSession: () => get(K.session, null),
+      setSession: (v) => set(K.session, v),
+      clearSession: () => localStorage.removeItem(K.session),
+      findStudentByCode: (code) => { const c = String(code || '').trim().toUpperCase(); return get(K.students, []).find(s => s.code.toUpperCase() === c) || null; },
+      findGroup: (id) => get(K.groups, []).find(g => g.id === id) || null,
+      findExam: (id) => get(K.exams, []).find(e => e.id === id) || null
+    };
+  })();
+
+  /* ===== APP DATA ===== */
+  const AppData = {
+    dhikr: {
+      'شنبه':    { text: 'یا رب العالمین',                     note: 'آغاز هفته را با یاد پروردگار جهانیان مزین کن.' },
+      'یک‌شنبه': { text: 'یا ذالجلال والاکرام',                note: 'از صاحب جلال و اکرام، بزرگی و کرامت بخواه.' },
+      'دوشنبه':  { text: 'یا قاضی الحاجات',                    note: 'حاجاتت را با توکل به او بسپار.' },
+      'سه‌شنبه': { text: 'یا ارحم الراحمین',                   note: 'رحمت او بی‌کران است.' },
+      'چهارشنبه':{ text: 'یا حی یا قیوم',                      note: 'زنده و پاینده، تکیه‌گاه همه هستی است.' },
+      'پنج‌شنبه':{ text: 'لا اله الا الله الملک الحق المبین', note: 'یگانه‌پرستی، نور دل‌هاست.' },
+      'جمعه':    { text: 'اللهم صل علی محمد و آل محمد',        note: 'جمعه، روز صلوات.' }
+    },
+    ayahs: [
+      { surah: 'بقره',     number: 255, text: 'اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ', translation: 'خداوند، خدایی جز او نیست؛ زنده و پاینده است.' },
+      { surah: 'رعد',      number: 28,  text: 'أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ', translation: 'آگاه باش که تنها با یاد خدا دل‌ها آرام می‌گیرد.' },
+      { surah: 'انشراح',   number: 5,   text: 'فَإِنَّ مَعَ الْعُسْرِ يُسْرًا', translation: 'پس همانا با سختی، آسانی است.' },
+      { surah: 'توحید',    number: 1,   text: 'قُلْ هُوَ اللَّهُ أَحَدٌ', translation: 'بگو: او خدای یگانه است.' },
+      { surah: 'فجر',      number: 27,  text: 'يَا أَيَّتُهَا النَّفْسُ الْمُطْمَئِنَّةُ', translation: 'ای نفس آرام‌گرفته!' }
+    ],
+    inspirations: [
+      { label: 'یادآوری امروز', quote: 'منتظر واقعی، کسی است که با عمل خود، زمینه‌ساز ظهور باشد.', author: '— در مسیر انتظار' },
+      { label: 'نکته اخلاقی',   quote: 'خوش‌اخلاقی، نیمی از ایمان است.', author: '— از معارف اهل بیت' },
+      { label: 'یادآوری امروز', quote: 'هر صلوات، پلی است به سوی نور.', author: '— ذکر دل' }
+    ],
+    notifications: [
+      { id: 'n-1', type: 'urgent', category: 'آزمون', title: 'آزمون معارف مهدوی ویژه گروه نوری ۸', summary: 'فرصت شرکت تا پایان روز جمعه تمدید شد.', body: 'آزمون معارف مهدوی این هفته به صورت آنلاین برگزار می‌شود.', date: '۱۴۰۴/۰۶/۱۲', time: '۲۰:۰۰', cta: 'مشاهده آزمون', ctaAction: 'exams', featured: true },
+      { id: 'n-2', type: 'info', category: 'اردو', title: 'اردوی یک‌روزه گروه پیروان', summary: 'پنجشنبه این هفته – ثبت‌نام تا چهارشنبه.', body: 'اردوی یک‌روزه روز پنجشنبه برگزار می‌شود.', date: '۱۴۰۴/۰۶/۱۳', time: 'صبح', cta: 'اطلاعات بیشتر', ctaAction: 'student', featured: false }
+    ]
+  };
+
+  /* ===== Poster generator ===== */
+  function makePosterSVG(title, sub, c1, c2, bg) {
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800"><defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${bg}"/><stop offset="1" stop-color="${c2}" stop-opacity="0.35"/></linearGradient><pattern id="p" width="60" height="60" patternUnits="userSpaceOnUse"><g fill="none" stroke="${c2}" stroke-width="1" opacity="0.35"><path d="M30 0 L60 30 L30 60 L0 30 Z"/><circle cx="30" cy="30" r="4"/></g></pattern></defs><rect width="600" height="800" fill="url(#g)"/><rect width="600" height="800" fill="url(#p)"/><rect x="30" y="30" width="540" height="740" fill="none" stroke="${c1}" stroke-width="2" rx="18"/><rect x="42" y="42" width="516" height="716" fill="none" stroke="${c2}" stroke-width="1" rx="14"/><text x="300" y="380" font-family="serif" font-size="72" font-weight="bold" fill="${c1}" text-anchor="middle">${title}</text><text x="300" y="440" font-family="serif" font-size="28" fill="${c1}" opacity="0.7" text-anchor="middle">${sub}</text></svg>`;
+    return 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg);
+  }
+  const GALLERY_POSTERS = [
+    makePosterSVG('مسیر نور', 'پوستر ۱', '#2d6a4f', '#e8d5b5', '#fcf8f0'),
+    makePosterSVG('انتظار',   'پوستر ۲', '#a88a4f', '#2d6a4f', '#fbf6ec'),
+    makePosterSVG('عهد دل‌ها','پوستر ۳', '#1e3a2f', '#c9a96e', '#fcf8f0')
+  ];
+
+  /* ===== Helpers ===== */
+  function getPersianDay() { const m = { 6: 'شنبه', 0: 'یک‌شنبه', 1: 'دوشنبه', 2: 'سه‌شنبه', 3: 'چهارشنبه', 4: 'پنج‌شنبه', 5: 'جمعه' }; return m[new Date().getDay()] || 'شنبه'; }
+  function getDayOfYear() { const now = new Date(); const start = new Date(now.getFullYear(), 0, 0); return Math.floor((now - start) / 86400000); }
+  function getPersianDateLabel() { try { return new Intl.DateTimeFormat('fa-IR-u-ca-persian', { weekday: 'long', day: 'numeric', month: 'long' }).format(new Date()); } catch (e) { return ''; } }
+  function fmtDate(iso) { try { return new Intl.DateTimeFormat('fa-IR', { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' }).format(new Date(iso)); } catch (e) { return iso; } }
+  function fmtTime(sec) { sec = Math.max(0, Math.floor(sec)); const h = Math.floor(sec / 3600), m = Math.floor((sec % 3600) / 60), s = sec % 60; if (h > 0) return toFa(h) + ':' + String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0'); return String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0'); }
+
+  const toastEl = $('toast'); let toastTimer = null;
+  function toast(msg, ms) { if (!toastEl) return; toastEl.textContent = msg; toastEl.classList.add('is-open'); clearTimeout(toastTimer); toastTimer = setTimeout(() => toastEl.classList.remove('is-open'), ms || 2400); }
+
+  /* ===== ROUTER ===== */
+  const PAGES = ['home', 'exams', 'games'];
+  let currentPage = null;
+  function showPage(name) {
+    if (!PAGES.includes(name)) name = 'home';
+    if (currentPage === name) return;
+    $$('.page').forEach(p => p.classList.toggle('is-active', p.getAttribute('data-page') === name));
+    currentPage = name;
+    $$('[data-nav]').forEach(el => el.classList.toggle('is-active', el.getAttribute('data-nav') === name));
+    window.scrollTo({ top: 0, behavior: 'auto' });
+    if (name === 'exams') safe(Exams.render)();
+    if (name === 'games') safe(Games.mount)();
+  }
+  function handleHash() {
+    const hash = (location.hash || '').replace('#', '');
+    if (PAGES.includes(hash)) { showPage(hash); return; }
+    if (hash && document.getElementById(hash)) {
+      if (currentPage !== 'home') showPage('home');
+      setTimeout(() => { const t = document.getElementById(hash); if (t) try { t.scrollIntoView({ behavior: 'smooth', block: 'start' }); } catch (e) {} }, 80);
+    } else showPage('home');
+  }
+  window.addEventListener('hashchange', handleHash);
+
+  /* ===== MASTER CLICKS ===== */
+  document.addEventListener('click', function (ev) {
+    const navEl = ev.target.closest('[data-nav]');
+    if (navEl) { ev.preventDefault(); const name = navEl.getAttribute('data-nav'); if (name && PAGES.includes(name)) { if (location.hash !== '#' + name) history.pushState(null, '', '#' + name); showPage(name); closeDrawer(); } return; }
+    const examBtn = ev.target.closest('[data-exam-start]');
+    if (examBtn) { ev.preventDefault(); const id = examBtn.getAttribute('data-exam-start'); if (id) safe(() => Exams.start(id))(); return; }
+    const gameTab = ev.target.closest('.game-tab[data-game]');
+    if (gameTab) { ev.preventDefault(); const g = gameTab.getAttribute('data-game'); if (g) safe(() => Games.switchTo(g))(); return; }
+  });
+
+  /* ===== RENDER: ZEKR / AYAH / INSPIRE ===== */
+  let currentZekrDay = null;
+  function renderZekr(animate) {
+    const day = getPersianDay();
+    if (!animate && day === currentZekrDay) return;
+    const data = (AppData.dhikr && AppData.dhikr[day]) || { text: 'یا رب العالمین', note: 'با یاد خدا، دل‌ها آرام می‌گیرد.' };
+    const apply = () => {
+      const zd = $('zekrDay'); if (zd) zd.textContent = day;
+      const zt = $('zekrText'); if (zt) zt.textContent = data.text;
+      const zn = $('zekrNote'); if (zn) zn.textContent = data.note;
+      const zg = $('zekrGreeting'); if (zg) zg.textContent = 'ذکر روز ' + day;
+      currentZekrDay = day;
+      const label = getPersianDateLabel();
+      const zh = $('zekrDateHint'); if (zh && label) zh.textContent = label;
+    };
+    const zt = $('zekrText');
+    if (animate && zt && zt.textContent && zt.textContent !== '…') {
+      zt.classList.add('is-changing');
+      setTimeout(() => { try { apply(); } catch (e) {} zt.classList.remove('is-changing'); }, 260);
+    } else apply();
+  }
+  let currentAyah = null;
+  function renderAyah() {
+    const list = AppData.ayahs || []; if (!list.length) return;
+    const a = list[getDayOfYear() % list.length]; currentAyah = a;
+    const sEl = $('surahName'); if (sEl) sEl.textContent = a.surah;
+    const nEl = $('ayahNumber'); if (nEl) nEl.textContent = toFa(a.number);
+    const tEl = $('ayahText'); if (tEl) tEl.textContent = a.text;
+    const trEl = $('ayahTranslation'); if (trEl) trEl.textContent = a.translation;
+  }
+  function renderInspiration() {
+    const list = AppData.inspirations || []; if (!list.length) return;
+    const it = list[getDayOfYear() % list.length];
+    const l = $('inspireLabel'); if (l) l.textContent = it.label;
+    const q = $('inspireQuote'); if (q) q.textContent = it.quote;
+    const a = $('inspireAuthor'); if (a) a.textContent = it.author;
+  }
+
+  /* ===== NOTIFICATIONS ===== */
+  function renderNotifications() {
+    const featuredEl = $('notifFeatured'), stripEl = $('notifStrip'), hintEl = $('notifHint');
+    if (!featuredEl || !stripEl) return;
+    const list = (AppData.notifications || []).filter(n => n && n.id);
+    if (!list.length) { featuredEl.innerHTML = ''; stripEl.innerHTML = ''; return; }
+    const featured = list.find(n => n.featured) || list[0];
+    const others = list.filter(n => n.id !== featured.id);
+    if (hintEl) hintEl.textContent = toFa(list.length) + ' اطلاعیه';
+    const bell = $('bellBtn'), badge = $('bellBadge');
+    if (bell && badge) { bell.classList.add('has-unread'); badge.textContent = toFa(list.length); }
+    featuredEl.innerHTML = `<article class="notif-hero reveal"><div class="notif-hero-body"><div class="notif-badge"><span class="dot"></span>${escapeHtml(featured.category)}</div><h3>${escapeHtml(featured.title)}</h3><p>${escapeHtml(featured.summary)}</p><div class="notif-meta"><span>📅 ${escapeHtml(featured.date)}</span>${featured.time ? `<span>⏱ ${escapeHtml(featured.time)}</span>` : ''}</div><div class="notif-actions"><button class="btn-notif-primary" type="button" data-notif-action="detail" data-notif-id="${escapeHtml(featured.id)}">مشاهده جزئیات</button>${featured.cta ? `<button class="btn-notif-ghost" type="button" data-notif-action="${escapeHtml(featured.ctaAction || '')}" data-notif-id="${escapeHtml(featured.id)}">${escapeHtml(featured.cta)}</button>` : ''}</div></div></article>`;
+    if (!others.length) { stripEl.innerHTML = ''; stripEl.classList.add('hidden'); }
+    else { stripEl.classList.remove('hidden'); stripEl.innerHTML = others.map(n => `<button class="notif-mini" type="button" data-notif-action="detail" data-notif-id="${escapeHtml(n.id)}"><span class="cat ${escapeHtml(n.type || '')}">${escapeHtml(n.category)}</span><h4>${escapeHtml(n.title)}</h4><span class="date">${escapeHtml(n.date)}</span></button>`).join(''); }
+  }
+  function findNotif(id) { return (AppData.notifications || []).find(n => n && n.id === id) || null; }
+  function openNotifModal(id) {
+    const n = findNotif(id); if (!n) return;
+    const content = $('notifModalContent'); if (!content) return;
+    const bodyHtml = String(n.body || '').split('\n').map(l => l.trim() === '' ? '<br>' : `<p>${escapeHtml(l)}</p>`).join('');
+    content.innerHTML = `<span class="notif-detail-cat ${escapeHtml(n.type || '')}">${escapeHtml(n.category)}</span><h3 class="notif-detail-title">${escapeHtml(n.title)}</h3><div class="notif-detail-meta"><span>📅 ${escapeHtml(n.date)}</span>${n.time ? `<span>⏱ ${escapeHtml(n.time)}</span>` : ''}</div><div class="notif-detail-body">${bodyHtml}</div>${n.cta ? `<div style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap;"><button class="btn btn-primary" type="button" data-notif-action="${escapeHtml(n.ctaAction || '')}" data-notif-id="${escapeHtml(n.id)}">${escapeHtml(n.cta)}</button></div>` : ''}`;
+    const modal = $('notifModal'); if (modal) { modal.classList.add('is-open'); syncBodyLock(); }
+  }
+  function closeNotifModal() { const m = $('notifModal'); if (m) m.classList.remove('is-open'); syncBodyLock(); }
+
+  /* ===== GALLERY ===== */
+  const sliderTrack = $('sliderTrack'), sliderDots = $('sliderDots'), sliderEl = $('slider'), galleryCounter = $('galleryCounter');
+  let slideIndex = 0, slideTimer = null, slides = [];
+  function renderGallery() {
+    if (!sliderTrack || !sliderDots) return;
+    const posters = GALLERY_POSTERS;
+    const single = posters.length === 1;
+    if (sliderEl) sliderEl.classList.toggle('is-single', single);
+    $('slidePrev').style.display = single ? 'none' : '';
+    $('slideNext').style.display = single ? 'none' : '';
+    $('sliderDots').style.display = single ? 'none' : '';
+    sliderTrack.innerHTML = ''; sliderDots.innerHTML = ''; slides = [];
+    posters.forEach((src, i) => {
+      const slide = document.createElement('div'); slide.className = 'slide';
+      const img = document.createElement('img'); img.src = src; img.alt = 'پوستر ' + toFa(i + 1); img.loading = i === 0 ? 'eager' : 'lazy'; img.draggable = false;
+      slide.appendChild(img); sliderTrack.appendChild(slide); slides.push(slide);
+      if (!single) { const dot = document.createElement('button'); dot.type = 'button'; dot.setAttribute('role', 'tab'); dot.addEventListener('click', () => goToSlide(i, true)); sliderDots.appendChild(dot); }
+    });
+    goToSlide(0); if (!single) startAutoSlide(); updateCounter();
+  }
+  function goToSlide(i, userAction) { const total = slides.length; if (!total) return; slideIndex = ((i % total) + total) % total; if (sliderTrack) sliderTrack.style.transform = 'translate3d(' + (-slideIndex * 100) + '%, 0, 0)'; if (sliderDots) { const dots = sliderDots.children; for (let k = 0; k < dots.length; k++) dots[k].classList.toggle('is-active', k === slideIndex); } updateCounter(); if (userAction && slides.length > 1) startAutoSlide(); }
+  function updateCounter() { if (galleryCounter) galleryCounter.textContent = slides.length === 1 ? '۱ پوستر' : toFa(slideIndex + 1) + ' از ' + toFa(slides.length); }
+  function startAutoSlide() { stopAutoSlide(); if (slides.length <= 1) return; if (matchMedia('(prefers-reduced-motion: reduce)').matches) return; slideTimer = setInterval(() => goToSlide(slideIndex + 1), 2200); }
+  function stopAutoSlide() { if (slideTimer) { clearInterval(slideTimer); slideTimer = null; } }
+  $('slidePrev') && $('slidePrev').addEventListener('click', () => goToSlide(slideIndex - 1, true));
+  $('slideNext') && $('slideNext').addEventListener('click', () => goToSlide(slideIndex + 1, true));
+  if (sliderEl) {
+    sliderEl.addEventListener('mouseenter', stopAutoSlide);
+    sliderEl.addEventListener('mouseleave', startAutoSlide);
+    let tX = 0, tY = 0, tA = false;
+    sliderEl.addEventListener('touchstart', (e) => { const t = e.touches[0]; tX = t.clientX; tY = t.clientY; tA = true; stopAutoSlide(); }, { passive: true });
+    sliderEl.addEventListener('touchend', (e) => { if (!tA) return; tA = false; const t = e.changedTouches[0]; const dx = t.clientX - tX, dy = t.clientY - tY; if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy) && slides.length > 1) dx > 0 ? goToSlide(slideIndex - 1, true) : goToSlide(slideIndex + 1, true); else startAutoSlide(); }, { passive: true });
+  }
+
+  /* ===== SESSION ===== */
+  let currentStudent = null;
+  function showUserMenu(student) {
+    currentStudent = student;
+    const initial = (student.name || '؟').trim().charAt(0) || '؟';
+    const avT = $('userAvatarText'); if (avT) avT.textContent = initial;
+    const avD = $('dropdownAvatar'); if (avD) avD.textContent = initial;
+    const nm = $('dropdownName'); if (nm) nm.textContent = student.name;
+    const grp = Store.findGroup(student.groupId);
+    const grpEl = $('dropdownGroup'); if (grpEl) grpEl.textContent = '🎓 ' + (grp ? grp.name : student.groupId);
+    const openL = $('openLogin'); if (openL) openL.style.display = 'none';
+    const um = $('userMenu'); if (um) um.classList.add('is-active');
+    const sn = $('studentName'); if (sn) sn.textContent = student.name;
+    const sm = $('studentMeta'); if (sm) sm.textContent = 'گروه: ' + (grp ? grp.name : student.groupId);
+    const sa = $('studentAvatar'); if (sa) sa.textContent = initial;
+    const sg = $('studentGroupInline'); if (sg) sg.textContent = grp ? grp.name : student.groupId;
+    const gu = $('studentGuest'); if (gu) gu.classList.add('hidden');
+    const sp = $('studentPanel'); if (sp) sp.classList.add('is-active');
+    renderResultsDropdown();
+    if (currentPage === 'exams') Exams.render();
+  }
+  function hideUserMenu() {
+    currentStudent = null;
+    const openL = $('openLogin'); if (openL) openL.style.display = '';
+    const um = $('userMenu'); if (um) um.classList.remove('is-active');
+    const gu = $('studentGuest'); if (gu) gu.classList.remove('hidden');
+    const sp = $('studentPanel'); if (sp) sp.classList.remove('is-active');
+    closeUserDropdown();
+    if (currentPage === 'exams') Exams.render();
+  }
+  function renderResultsDropdown() {
+    const results = Store.results();
+    const mine = currentStudent ? results.filter(r => r.studentId === currentStudent.code) : [];
+    const cEl = $('resultsCount'); if (cEl) cEl.textContent = toFa(mine.length);
+    const list = $('examResultsList'); if (!list) return;
+    if (!mine.length) { list.innerHTML = `<div class="empty-results"><div style="font-size:1.8rem;opacity:.5;margin-bottom:6px">📝</div>هنوز در آزمونی شرکت نکردی</div>`; return; }
+    list.innerHTML = mine.map(r => { const pct = Math.round((r.score / r.total) * 100); const cls = pct < 50 ? 'low' : ''; return `<div class="exam-result-item"><div class="score-badge ${cls}" style="--pct:${pct}%;"><span>${toFa(pct)}٪</span></div><div style="flex:1;min-width:0"><div class="title">${escapeHtml(r.title)}</div><div class="meta">${escapeHtml(r.date)} · ${toFa(r.score)} از ${toFa(r.total)}</div></div></div>`; }).join('');
+  }
+  function openUserDropdown() { const ud = $('userDropdown'); if (ud) ud.classList.add('is-open'); const ov = $('dropdownOverlay'); if (ov) ov.classList.add('is-open'); }
+  function closeUserDropdown() { const ud = $('userDropdown'); if (ud) ud.classList.remove('is-open'); const ov = $('dropdownOverlay'); if (ov) ov.classList.remove('is-open'); }
+  $('userAvatarBtn') && $('userAvatarBtn').addEventListener('click', (e) => { e.stopPropagation(); const ud = $('userDropdown'); if (ud.classList.contains('is-open')) closeUserDropdown(); else openUserDropdown(); });
+  $('dropdownOverlay') && $('dropdownOverlay').addEventListener('click', closeUserDropdown);
+  $('clearResultsBtn') && $('clearResultsBtn').addEventListener('click', () => { if (!confirm('همه نتایج آزمون‌های شما پاک شوند؟')) return; const all = Store.results(); const filtered = currentStudent ? all.filter(r => r.studentId !== currentStudent.code) : all; Store.saveResults(filtered); renderResultsDropdown(); toast('✅ نتایج پاک شد.'); });
+  $('logoutDropdownBtn') && $('logoutDropdownBtn').addEventListener('click', () => { Store.clearSession(); hideUserMenu(); toast('از حساب خارج شدی.'); });
+
+  /* ===== LOGIN ===== */
+  const loginModal = $('loginModal'), loginInput = $('studentCode'), loginMsg = $('loginMsg');
+  function openLoginModal() { if (!loginModal) return; loginModal.classList.add('is-open'); if (loginMsg) { loginMsg.textContent = ''; loginMsg.className = 'form-msg'; } syncBodyLock(); setTimeout(() => { if (loginInput) try { loginInput.focus(); } catch (e) {} }, 300); }
+  function closeLoginModal() { if (!loginModal) return; loginModal.classList.remove('is-open'); syncBodyLock(); }
+  $('openLogin') && $('openLogin').addEventListener('click', openLoginModal);
+  $('openLoginFromCard') && $('openLoginFromCard').addEventListener('click', openLoginModal);
+  $('quickLogin') && $('quickLogin').addEventListener('click', openLoginModal);
+  $('closeLogin') && $('closeLogin').addEventListener('click', closeLoginModal);
+  $('cancelLogin') && $('cancelLogin').addEventListener('click', closeLoginModal);
+  loginModal && loginModal.addEventListener('click', (e) => { if (e.target === loginModal) closeLoginModal(); });
+  loginInput && loginInput.addEventListener('input', function () { let v = loginInput.value.toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 12); let out = ''; for (let i = 0; i < v.length; i++) { if (i > 0 && i % 4 === 0) out += '-'; out += v[i]; } loginInput.value = out; });
+  loginInput && loginInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); $('submitLogin') && $('submitLogin').click(); } });
+  const normalizeCode = (v) => String(v || '').trim().toUpperCase().replace(/\s+/g, '');
+  const isValidCode = (v) => /^[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{4}$/.test(v);
+  $('submitLogin') && $('submitLogin').addEventListener('click', async function () {
+    if (!loginInput || !loginMsg) return;
+    const code = normalizeCode(loginInput.value);
+    if (!code) { loginMsg.textContent = 'لطفاً کد خود را وارد کنید.'; loginMsg.className = 'form-msg err'; return; }
+    if (!isValidCode(code)) { loginMsg.textContent = 'قالب کد صحیح نیست. نمونه: N8B2-2222-BBBB'; loginMsg.className = 'form-msg err'; return; }
+    loginMsg.textContent = 'در حال بررسی…'; loginMsg.className = 'form-msg';
+    await new Promise(r => setTimeout(r, 500));
+    const student = Store.findStudentByCode(code);
+    if (!student) { loginMsg.textContent = 'کد یافت نشد.'; loginMsg.className = 'form-msg err'; return; }
+    Store.setSession({ code: student.code, at: Date.now() });
+    showUserMenu(student);
+    loginMsg.textContent = 'ورود موفق!'; loginMsg.className = 'form-msg ok';
+    setTimeout(closeLoginModal, 400);
+    toast('خوش آمدی، ' + student.name);
+  });
+  $('logoutBtn') && $('logoutBtn').addEventListener('click', () => { Store.clearSession(); hideUserMenu(); toast('از حساب خارج شدی.'); });
+
+  /* ===== EXAMS ===== */
+  const Exams = (() => {
+    const state = { currentExam: null, answers: [], currentIdx: 0, timerId: null, remainingSec: 0, startedAt: 0, finished: false };
+    function getStatus(exam) { const now = Date.now(); const start = new Date(exam.startAt).getTime(); const end = new Date(exam.endAt).getTime(); if (currentStudent && Store.hasAttempted(currentStudent.code, exam.id)) return 'attempted'; if (now < start) return 'upcoming'; if (now > end) return 'ended'; return 'active'; }
+    function render() {
+      const wrap = $('examsList'); if (!wrap) return;
+      if (!currentStudent) { wrap.innerHTML = `<div class="card has-corners" style="text-align:center;padding:32px 24px"><div style="width:60px;height:60px;border-radius:18px;background:linear-gradient(135deg,var(--green),var(--green-deep));color:#fff;display:grid;place-items:center;margin:0 auto 16px;font-size:1.6rem">🔐</div><h3 style="font-size:1.1rem;color:var(--green-deep);font-weight:800;margin-bottom:8px">برای دیدن آزمون‌ها وارد شو</h3><p style="color:var(--ink-soft);font-size:.92rem;max-width:420px;margin:0 auto 20px;line-height:1.85">آزمون‌ها مخصوص گروه شما هستند.</p><button class="btn btn-primary" id="examsLoginBtn">ورود با کد دانش‌آموزی</button></div>`; const b = $('examsLoginBtn'); if (b) b.addEventListener('click', openLoginModal); return; }
+      const all = Store.exams();
+      const mine = all.filter(e => e.groupId === currentStudent.groupId);
+      if (!mine.length) { wrap.innerHTML = `<div class="card has-corners"><div class="state-empty"><div class="ico-wrap">📝</div><strong>در حال حاضر آزمونی برای گروه شما وجود ندارد</strong></div></div>`; return; }
+      wrap.innerHTML = mine.map(e => {
+        const status = getStatus(e);
+        const statusText = { active: '🟢 در حال برگزاری', upcoming: '🟡 به‌زودی', ended: '🔴 به پایان رسیده', attempted: '✓ شرکت کرده‌اید' }[status];
+        const btnText = { active: 'شروع آزمون', upcoming: 'هنوز شروع نشده', ended: 'مهلت تمام شده', attempted: 'شرکت کرده‌اید' }[status];
+        const disabled = status !== 'active' ? 'disabled' : '';
+        const qCount = e.questions ? e.questions.length : 0;
+        return `<div class="exam-card status-${status}"><span class="status ${status}">${statusText}</span><h3>${escapeHtml(e.title)}</h3><div class="meta"><span>📅 ${fmtDate(e.startAt)}</span><span>⏱ ${toFa(e.durationMin)} دقیقه</span><span>📝 ${toFa(qCount)} سؤال</span></div><p class="desc">${status === 'active' ? 'این آزمون در حال برگزاری است.' : (status === 'attempted' ? 'شما قبلاً در این آزمون شرکت کرده‌اید.' : (status === 'upcoming' ? 'این آزمون هنوز فعال نشده است.' : 'مهلت شرکت تمام شده است.'))}</p>${status === 'active' ? `<button class="btn-exam" data-exam-start="${escapeHtml(e.id)}" type="button">${btnText}</button>` : `<button class="btn-exam ghost" disabled type="button">${btnText}</button>`}</div>`;
+      }).join('');
+    }
+    function start(examId) {
+      const exam = Store.findExam(examId);
+      if (!exam || !currentStudent) { toast('خطا'); return; }
+      const status = getStatus(exam);
+      if (status !== 'active') { toast('آزمون فعال نیست.'); return; }
+      if (Store.hasAttempted(currentStudent.code, exam.id)) { toast('قبلاً شرکت کرده‌اید.'); return; }
+      if (!exam.questions || !exam.questions.length) { toast('سؤالی تعریف نشده.'); return; }
+      state.currentExam = exam; state.answers = new Array(exam.questions.length).fill(null);
+      state.currentIdx = 0; state.finished = false; state.startedAt = Date.now();
+      state.remainingSec = exam.durationMin * 60;
+      const et = $('examTaking'); if (et) et.classList.add('is-open');
+      document.body.classList.add('is-locked');
+      renderTaking(); startTimer();
+    }
+    function startTimer() { stopTimer(); updateTimerDisplay(); state.timerId = setInterval(() => { state.remainingSec--; updateTimerDisplay(); if (state.remainingSec <= 0) { stopTimer(); autoSubmit(); } }, 1000); }
+    function stopTimer() { if (state.timerId) { clearInterval(state.timerId); state.timerId = null; } }
+    function updateTimerDisplay() { const el = $('examTimer'); if (!el) return; el.textContent = '⏱ ' + fmtTime(state.remainingSec); el.classList.toggle('warning', state.remainingSec <= 60); }
+    function renderTaking() {
+      const exam = state.currentExam; if (!exam) return;
+      const total = exam.questions.length; const q = exam.questions[state.currentIdx];
+      const answered = state.answers.filter(a => a !== null).length;
+      const progress = Math.round((answered / total) * 100);
+      const mount = $('examTakingMount'); if (!mount) return;
+      mount.innerHTML = `<div class="exam-topbar"><div class="exam-timer" id="examTimer">⏱ ${fmtTime(state.remainingSec)}</div><div class="exam-progress"><div class="exam-progress-fill" style="width:${progress}%"></div></div><div class="exam-q-count">${toFa(state.currentIdx + 1)} / ${toFa(total)}</div></div><div class="exam-q-card"><div class="exam-q-num">سؤال ${toFa(state.currentIdx + 1)}</div><div class="exam-q-text">${escapeHtml(q.q)}</div><div class="exam-options" id="examOptions">${q.options.map((opt, i) => `<button class="exam-option ${state.answers[state.currentIdx] === i ? 'is-selected' : ''}" data-opt-index="${i}" type="button"><span class="radio"></span><span class="letter">${['الف','ب','پ','ت'][i] || toFa(i + 1)}</span><span>${escapeHtml(opt)}</span></button>`).join('')}</div></div><div class="exam-q-dots">${exam.questions.map((_, i) => `<button class="exam-q-dot ${state.answers[i] !== null ? 'answered' : ''} ${i === state.currentIdx ? 'current' : ''}" data-goto="${i}" type="button">${toFa(i + 1)}</button>`).join('')}</div><div class="exam-nav"><div class="exam-nav-btns"><button class="btn-exam-nav" id="examPrev" ${state.currentIdx === 0 ? 'disabled' : ''}>‹ قبلی</button><button class="btn-exam-nav" id="examNext" ${state.currentIdx === total - 1 ? 'disabled' : ''}>بعدی ›</button></div><button class="btn-exam-nav btn-exam-finish" id="examFinish">پایان و ارسال</button></div>`;
+      const opts = $('examOptions'); if (opts) opts.addEventListener('click', (ev) => { const b = ev.target.closest('.exam-option'); if (!b) return; state.answers[state.currentIdx] = parseInt(b.getAttribute('data-opt-index'), 10); renderTaking(); });
+      $('examPrev') && $('examPrev').addEventListener('click', () => { if (state.currentIdx > 0) { state.currentIdx--; renderTaking(); } });
+      $('examNext') && $('examNext').addEventListener('click', () => { if (state.currentIdx < total - 1) { state.currentIdx++; renderTaking(); } });
+      $('examFinish') && $('examFinish').addEventListener('click', confirmFinish);
+      $$('.exam-q-dot').forEach(d => d.addEventListener('click', () => { state.currentIdx = parseInt(d.getAttribute('data-goto'), 10); renderTaking(); }));
+    }
+    function confirmFinish() {
+      const total = state.currentExam.questions.length;
+      const unanswered = state.answers.filter(a => a === null).length;
+      const msg = $('finishMsg');
+      if (msg) msg.textContent = unanswered > 0 ? `هنوز به ${toFa(unanswered)} سؤال پاسخ نداده‌اید.` : 'همه سؤالات پاسخ داده شده. ارسال شود؟';
+      const m = $('confirmFinishModal'); if (m) m.classList.add('is-open');
+    }
+    $('cancelFinish') && $('cancelFinish').addEventListener('click', () => { const m = $('confirmFinishModal'); if (m) m.classList.remove('is-open'); });
+    $('confirmFinish') && $('confirmFinish').addEventListener('click', () => { const m = $('confirmFinishModal'); if (m) m.classList.remove('is-open'); submitExam(false); });
+    function autoSubmit() { toast('⏰ زمان به پایان رسید.'); submitExam(true); }
+    function submitExam(isAuto) {
+      if (state.finished) return; state.finished = true; stopTimer();
+      const exam = state.currentExam; let score = 0;
+      const review = exam.questions.map((q, i) => { const picked = state.answers[i]; const correct = picked === q.correct; if (correct) score++; return { q, picked, correct }; });
+      const total = exam.questions.length; const finishedAt = Date.now();
+      Store.addResult({ examId: exam.id, title: exam.title, groupId: exam.groupId, studentId: currentStudent.code, score, total, answers: state.answers, startedAt: state.startedAt, finishedAt, date: new Date().toLocaleDateString('fa-IR'), autoSubmitted: !!isAuto });
+      renderResultsDropdown();
+      renderResultScreen({ score, total, review });
+    }
+    function renderResultScreen(data) {
+      const pct = Math.round((data.score / data.total) * 100); const isLow = pct < 50;
+      let msg = 'باز هم تلاش کن!'; if (pct >= 80) msg = 'عالی بود! ماشاءالله.'; else if (pct >= 60) msg = 'خوب بود، ادامه بده!'; else if (pct >= 40) msg = 'قابل قبول.';
+      const mount = $('examTakingMount'); if (!mount) return;
+      mount.innerHTML = `<div class="exam-result-screen"><div class="exam-result-circle ${isLow ? 'low' : ''}" style="--pct:${pct}%"><div class="exam-result-inner"><div class="exam-result-num">${toFa(pct)}٪</div><div class="exam-result-lbl">${toFa(data.score)} از ${toFa(data.total)}</div></div></div><h2>${escapeHtml(msg)}</h2><p>نتیجه در پنل کاربری ثبت شد.</p><button class="btn btn-primary" id="examDone" type="button">بستن</button></div><div class="answer-review">${data.review.map((r, i) => `<div class="answer-review-item ${r.correct ? 'ok' : 'err'}"><div class="q">${toFa(i + 1)}. ${escapeHtml(r.q.q)}</div><div class="a">${r.correct ? `<strong>✓ درست:</strong> ${escapeHtml(r.q.options[r.q.correct])}<br>${escapeHtml(r.q.explanation || '')}` : `پاسخ شما: <span class="wrong">${r.picked === null ? '(بدون پاسخ)' : escapeHtml(r.q.options[r.picked])}</span><br><strong>درست:</strong> ${escapeHtml(r.q.options[r.q.correct])}<br>${escapeHtml(r.q.explanation || '')}`}</div></div>`).join('')}</div>`;
+      $('examDone') && $('examDone').addEventListener('click', closeExamTaking);
+    }
+    function closeExamTaking() { const et = $('examTaking'); if (et) et.classList.remove('is-open'); document.body.classList.remove('is-locked'); state.currentExam = null; state.answers = []; state.currentIdx = 0; state.finished = false; render(); }
+    return { render, start };
+  })();
+
+  /* ============================================================
+     GAMES (۵ بازی - با حافظه عددی بهینه‌شده)
+     ============================================================ */
+  const Games = (() => {
+    let initialized = false;
+    const timers = [];
+    const addTimer = (id) => { timers.push(id); return id; };
+    const clearTimers = () => { timers.forEach(t => { clearTimeout(t); clearInterval(t); }); timers.length = 0; };
+    const state = {
+      plinko: { balls: [], animId: null, score: 0, best: 0 },
+      guess: { secret: 0, score: 20, tries: 0, done: false },
+      memory: { cards: [], flipped: [], matched: 0, moves: 0, locked: false },
+      reaction: { state: 'idle', startTime: 0, best: null, last: null, timeoutId: null },
+      nummem: { sequence: '', userInput: '', level: 0, phase: 'idle', best: 0, showTimer: null, built: false }
+    };
+    const EMOJIS = ['🌸', '⭐', '🌙', '🕊', '🌿', '☀️', '💎', '🌺'];
+
+    /* ============ حافظه عددی (بدون لگ) ============ */
+    function nummemInit() {
+      clearTimers();
+      state.nummem = {
+        sequence: '', userInput: '', level: 0, phase: 'idle',
+        best: parseInt(localStorage.getItem('nummem_best') || '0', 10),
+        showTimer: null, built: false
+      };
+      nummemBuild();
+    }
+
+    function nummemBuild() {
+      const shell = $('gameShell'); if (!shell) return;
+      shell.innerHTML = `
+        <div class="game-header">
+          <div class="game-stats">
+            <span>سطح: <b id="nmLevel">۰</b></span>
+            <span>بهترین: <b id="nmBest">${toFa(state.nummem.best)}</b></span>
+          </div>
+          <button class="btn-game ghost" id="nmReset" type="button">شروع مجدد</button>
+        </div>
+        <div class="nummem-wrap">
+          <div class="nummem-display">
+            <div class="nummem-seq" id="nmSeq">—</div>
+          </div>
+          <div class="nummem-status" id="nmStatus">برای شروع، دکمه شروع را بزن</div>
+          <div class="nummem-input" id="nmInput">—</div>
+          <div class="nummem-pad" id="nmPad">
+            ${[1,2,3,4,5,6,7,8,9].map(n => `<button class="nummem-btn" data-digit="${n}" type="button">${toFa(n)}</button>`).join('')}
+            <button class="nummem-btn" data-digit="clear" type="button">⌫</button>
+            <button class="nummem-btn" data-digit="0" type="button">۰</button>
+            <button class="nummem-btn" data-digit="enter" type="button">✓</button>
+          </div>
+          <div id="nmStartWrap" style="margin-top:20px;">
+            <button class="btn-game" id="nmStart" type="button">شروع بازی</button>
+          </div>
+          <div class="nummem-result" id="nmResultWrap" style="display:none;">
+            <h3 id="nmResultTitle">—</h3>
+            <p id="nmResultDesc">—</p>
+          </div>
+        </div>
+        <p class="game-hint">دنباله اعداد یکی‌یکی نمایش داده می‌شه. باید به همون ترتیب وارد کنی. اگه اشتباه کنی، بازی از اول با یه دنباله جدید شروع می‌شه. حداقل تا ۲۰ رقم پیش می‌ره!</p>
+      `;
+      // attach handlers ONCE
+      const pad = $('nmPad');
+      if (pad) pad.addEventListener('click', (ev) => { const b = ev.target.closest('.nummem-btn'); if (!b || b.disabled) return; const d = b.getAttribute('data-digit'); if (d) nummemDigit(d); });
+      $('nmStart') && $('nmStart').addEventListener('click', nummemStart);
+      $('nmReset') && $('nmReset').addEventListener('click', nummemInit);
+      state.nummem.built = true;
+      nummemUpdateUI();
+    }
+
+    /* فقط بخش‌های لازم رو آپدیت می‌کنه */
+    function nummemUpdateUI() {
+      const st = state.nummem;
+      // level/best
+      const lv = $('nmLevel'); if (lv) lv.textContent = toFa(st.level);
+      const bst = $('nmBest'); if (bst) bst.textContent = toFa(st.best);
+      // sequence display
+      const seqEl = $('nmSeq');
+      if (seqEl) {
+        if (st.phase === 'showing') {
+          // نمایش دنباله با فاصله
+          seqEl.innerHTML = st.sequence.split('').map(c => `<span>${toFa(c)}</span>`).join(' ');
+        } else if (st.phase === 'typing') {
+          seqEl.textContent = '—';
+        } else if (st.phase === 'result') {
+          seqEl.innerHTML = st.sequence.split('').map((c, i) => {
+            const ok = st.userInput[i] === c;
+            return `<span style="color:${ok ? 'var(--green)' : 'var(--danger)'}">${toFa(c)}</span>`;
+          }).join(' ');
+        } else {
+          seqEl.textContent = '—';
+        }
+      }
+      // status text
+      const statusEl = $('nmStatus');
+      if (statusEl) {
+        if (st.phase === 'showing') statusEl.textContent = '👀 این اعداد را به خاطر بسپار';
+        else if (st.phase === 'typing') statusEl.textContent = '✍️ عدد را وارد کن';
+        else if (st.phase === 'result') statusEl.textContent = st.userInput === st.sequence ? '🎉 برنده شدی!' : '❌ باختی';
+        else statusEl.textContent = 'برای شروع، دکمه شروع را بزن';
+      }
+      // input display
+      const inEl = $('nmInput');
+      if (inEl) {
+        if (st.phase === 'typing') {
+          inEl.textContent = st.userInput || '—';
+          inEl.className = 'nummem-input';
+        } else if (st.phase === 'result') {
+          inEl.textContent = st.userInput || '—';
+          inEl.className = 'nummem-input ' + (st.userInput === st.sequence ? 'correct' : 'wrong');
+        } else {
+          inEl.textContent = '—';
+          inEl.className = 'nummem-input';
+        }
+      }
+      // buttons enabled
+      const enabled = st.phase === 'typing';
+      $$('.nummem-btn').forEach(b => { b.disabled = !enabled; });
+      // start button visibility
+      const startWrap = $('nmStartWrap');
+      if (startWrap) {
+        startWrap.style.display = (st.phase === 'showing' || st.phase === 'typing') ? 'none' : '';
+        const sb = $('nmStart');
+        if (sb) sb.textContent = st.phase === 'result' ? 'شروع دوباره' : (st.level > 0 ? 'ادامه بده' : 'شروع بازی');
+      }
+      // result panel
+      const resWrap = $('nmResultWrap');
+      if (resWrap) {
+        if (st.phase === 'result') {
+          resWrap.style.display = '';
+          resWrap.className = 'nummem-result ' + (st.userInput === st.sequence ? 'win' : 'lose');
+          const rt = $('nmResultTitle');
+          if (rt) rt.textContent = st.userInput === st.sequence ? '✓ آفرین!' : '✗ باختی';
+          const rd = $('nmResultDesc');
+          if (rd) rd.textContent = st.userInput === st.sequence
+            ? `به مرحله ${toFa(st.level)} رسیدی.`
+            : `دنباله این بود: ${st.sequence.split('').map(toFa).join(' ')}`;
+        } else {
+          resWrap.style.display = 'none';
+        }
+      }
+    }
+
+    function nummemStart() {
+      const st = state.nummem;
+      st.level = 1;
+      st.sequence = String(Math.floor(Math.random() * 10));
+      st.userInput = '';
+      st.phase = 'showing';
+      nummemUpdateUI();
+      const delay = Math.max(700, 1300 - st.level * 20);
+      st.showTimer = setTimeout(() => {
+        st.phase = 'typing';
+        nummemUpdateUI();
+      }, delay);
+      addTimer(st.showTimer);
+    }
+
+    function nummemDigit(d) {
+      const st = state.nummem; if (st.phase !== 'typing') return;
+      if (d === 'clear') { st.userInput = st.userInput.slice(0, -1); nummemUpdateUI(); return; }
+      if (d === 'enter') { nummemCheck(); return; }
+      if (/^\d$/.test(d) && st.userInput.length < st.sequence.length) {
+        st.userInput += d;
+        nummemUpdateUI();
+      }
+    }
+
+    function nummemCheck() {
+      const st = state.nummem;
+      if (st.userInput !== st.sequence) {
+        st.phase = 'result';
+        const prevLevel = st.level - 1;
+        if (prevLevel > st.best) { st.best = prevLevel; localStorage.setItem('nummem_best', String(st.best)); }
+        nummemUpdateUI();
+        return;
+      }
+      // correct
+      const reached = st.level;
+      if (reached > st.best) { st.best = reached; localStorage.setItem('nummem_best', String(st.best)); }
+      st.level++;
+      if (st.level > 20) {
+        st.phase = 'result';
+        nummemUpdateUI();
+        toast('🏆 فوق‌العاده! به ۲۰ رقم رسیدی!');
+        return;
+      }
+      st.sequence += String(Math.floor(Math.random() * 10));
+      st.userInput = '';
+      st.phase = 'showing';
+      nummemUpdateUI();
+      const delay = Math.max(700, 1300 - st.level * 20);
+      st.showTimer = setTimeout(() => { st.phase = 'typing'; nummemUpdateUI(); }, delay);
+      addTimer(st.showTimer);
+    }
+
+    /* ============ پلینکو ============ */
+    function plinkoInit() {
+      clearTimers();
+      if (state.plinko.animId) { cancelAnimationFrame(state.plinko.animId); state.plinko.animId = null; }
+      state.plinko = { balls: [], animId: null, score: 0, best: parseInt(localStorage.getItem('plinko_best') || '0', 10) };
+      const shell = $('gameShell'); if (!shell) return;
+      shell.innerHTML = `<div class="game-header"><div class="game-stats"><span>امتیاز: <b id="pkScore">۰</b></span><span>بهترین: <b id="pkBest">${toFa(state.plinko.best)}</b></span></div><button class="btn-game ghost" id="pkReset" type="button">شروع مجدد</button></div><div class="plinko-wrap"><canvas class="plinko-canvas" id="pkCanvas" width="340" height="453"></canvas></div><p class="game-hint">روی صفحه کلیک کن تا توپ بندازی.</p>`;
+      const canvas = $('pkCanvas'); if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      const W = canvas.width, H = canvas.height;
+      const pegs = []; const rows = 9, rowGap = (H - 80) / rows, colGap = W / 12;
+      for (let r = 0; r < rows; r++) { const cols = 6 + r; const startX = (W - cols * colGap) / 2 + colGap / 2; for (let c = 0; c < cols; c++) pegs.push({ x: startX + c * colGap, y: 60 + r * rowGap, r: 3 }); }
+      const bins = 7, binW = W / bins, mult = [1, 2, 5, 10, 5, 2, 1];
+      function draw() {
+        ctx.clearRect(0, 0, W, H);
+        for (let i = 0; i < bins; i++) { const x = i * binW; ctx.fillStyle = i === 3 ? '#c9a96e' : '#e8d5b5'; ctx.fillRect(x + 2, H - 50, binW - 4, 46); ctx.fillStyle = '#1e3a2f'; ctx.font = 'bold 13px Vazirmatn, sans-serif'; ctx.textAlign = 'center'; ctx.fillText('×' + toFa(mult[i]), x + binW / 2, H - 20); }
+        pegs.forEach(p => { ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2); ctx.fillStyle = '#c9a96e'; ctx.fill(); });
+        state.plinko.balls.forEach(b => { ctx.beginPath(); ctx.arc(b.x, b.y, b.r, 0, Math.PI * 2); const g = ctx.createRadialGradient(b.x - 2, b.y - 2, 1, b.x, b.y, b.r); g.addColorStop(0, '#fff'); g.addColorStop(1, '#2d6a4f'); ctx.fillStyle = g; ctx.fill(); });
+      }
+      function physics() {
+        const balls = state.plinko.balls;
+        for (let i = balls.length - 1; i >= 0; i--) {
+          const b = balls[i]; b.vy += 0.12; b.vx *= 0.995; b.x += b.vx; b.y += b.vy;
+          pegs.forEach(p => { const dx = b.x - p.x, dy = b.y - p.y; const dist = Math.hypot(dx, dy); const minDist = b.r + p.r + 1; if (dist < minDist && dist > 0) { const nx = dx / dist, ny = dy / dist; const ov = minDist - dist; b.x += nx * ov; b.y += ny * ov; const dot = b.vx * nx + b.vy * ny; b.vx -= 2 * dot * nx * 0.7; b.vy -= 2 * dot * ny * 0.7; b.vx += (Math.random() - 0.5) * 0.6; } });
+          if (b.x < b.r) { b.x = b.r; b.vx = Math.abs(b.vx) * 0.6; }
+          if (b.x > W - b.r) { b.x = W - b.r; b.vx = -Math.abs(b.vx) * 0.6; }
+          if (b.y > H - 55) { const idx = Math.min(bins - 1, Math.max(0, Math.floor(b.x / binW))); state.plinko.score += mult[idx]; if (state.plinko.score > state.plinko.best) { state.plinko.best = state.plinko.score; localStorage.setItem('plinko_best', String(state.plinko.best)); const bEl = $('pkBest'); if (bEl) bEl.textContent = toFa(state.plinko.best); } const sEl = $('pkScore'); if (sEl) sEl.textContent = toFa(state.plinko.score); balls.splice(i, 1); }
+        }
+        draw();
+        state.plinko.animId = requestAnimationFrame(physics);
+      }
+      const startP = () => { if (!state.plinko.animId) state.plinko.animId = requestAnimationFrame(physics); };
+      canvas.addEventListener('click', function (e) { const rect = canvas.getBoundingClientRect(); const x = (e.clientX - rect.left) * (W / rect.width); state.plinko.balls.push({ x: Math.max(20, Math.min(W - 20, x)), y: 20, vx: 0, vy: 1, r: 6 }); startP(); });
+      canvas.addEventListener('touchstart', function (e) { e.preventDefault(); const rect = canvas.getBoundingClientRect(); const x = (e.touches[0].clientX - rect.left) * (W / rect.width); state.plinko.balls.push({ x: Math.max(20, Math.min(W - 20, x)), y: 20, vx: 0, vy: 1, r: 6 }); startP(); }, { passive: false });
+      $('pkReset') && $('pkReset').addEventListener('click', function () { if (state.plinko.animId) { cancelAnimationFrame(state.plinko.animId); state.plinko.animId = null; } state.plinko.balls = []; state.plinko.score = 0; const s = $('pkScore'); if (s) s.textContent = '۰'; draw(); startP(); });
+      draw(); startP();
+    }
+
+    /* ============ حدس عدد ============ */
+    function guessInit() {
+      clearTimers();
+      state.guess = { secret: Math.floor(Math.random() * 20) + 1, score: 20, tries: 0, done: false };
+      const shell = $('gameShell'); if (!shell) return;
+      shell.innerHTML = `<div class="game-header"><div class="game-stats"><span>امتیاز: <b id="gsScore">۲۰</b></span><span>تلاش: <b id="gsTries">۰</b></span></div><button class="btn-game ghost" id="gsReset" type="button">شروع مجدد</button></div><div class="guess-wrap"><p style="color:var(--ink-soft);font-size:.92rem;margin-bottom:16px;">عددی بین ۱ تا ۲۰ حدس بزن</p><input class="guess-input" id="gsInput" type="number" min="1" max="20" placeholder="؟" /><div class="guess-msg" id="gsMsg">عددی رو حدس بزن</div><div class="guess-actions"><button class="btn-game" id="gsCheck" type="button">بررسی کن</button></div></div>`;
+      const input = $('gsInput'), msg = $('gsMsg'), scoreEl = $('gsScore'), triesEl = $('gsTries');
+      function check() {
+        if (state.guess.done) return;
+        const val = parseInt(input.value, 10);
+        if (!val || val < 1 || val > 20) { msg.textContent = 'عدد ۱ تا ۲۰'; msg.className = 'guess-msg'; return; }
+        state.guess.tries++; triesEl.textContent = toFa(state.guess.tries);
+        if (val === state.guess.secret) { state.guess.done = true; msg.textContent = '🎉 درست! عدد ' + toFa(state.guess.secret) + ' بود.'; msg.className = 'guess-msg win'; input.disabled = true; }
+        else { state.guess.score = Math.max(0, state.guess.score - 1); scoreEl.textContent = toFa(state.guess.score); msg.textContent = val < state.guess.secret ? '⬆️ بالاتر' : '⬇️ پایین‌تر'; msg.className = 'guess-msg ' + (val < state.guess.secret ? 'low' : 'high'); if (state.guess.score === 0) { state.guess.done = true; msg.textContent = 'امتیاز تموم شد!'; input.disabled = true; } }
+        input.value = ''; input.focus();
+      }
+      $('gsCheck') && $('gsCheck').addEventListener('click', check);
+      input && input.addEventListener('keydown', e => { if (e.key === 'Enter') check(); });
+      $('gsReset') && $('gsReset').addEventListener('click', guessInit);
+      setTimeout(() => input && input.focus(), 200);
+    }
+
+    /* ============ جفت‌یابی ============ */
+    function memoryInit() {
+      clearTimers();
+      const deck = [];
+      EMOJIS.forEach((e, i) => { deck.push({ id: i, emoji: e }); deck.push({ id: i, emoji: e }); });
+      for (let i = deck.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [deck[i], deck[j]] = [deck[j], deck[i]]; }
+      state.memory = { cards: deck, flipped: [], matched: 0, moves: 0, locked: false };
+      const shell = $('gameShell'); if (!shell) return;
+      shell.innerHTML = `<div class="game-header"><div class="game-stats"><span>حرکت: <b id="mmMoves">۰</b></span><span>جفت‌یافته: <b id="mmMatched">۰</b></span></div><button class="btn-game ghost" id="mmReset" type="button">شروع مجدد</button></div><div class="memory-grid" id="mmGrid"></div><p class="game-hint">کارت‌ها رو برگردون و جفت‌های مشابه رو پیدا کن.</p>`;
+      const grid = $('mmGrid');
+      state.memory.cards.forEach((card, i) => { const el = document.createElement('button'); el.type = 'button'; el.className = 'memory-card'; el.setAttribute('data-index', i); el.innerHTML = `<span class="face back"></span><span class="face front">${card.emoji}</span>`; grid.appendChild(el); });
+      grid.addEventListener('click', handleMemClick);
+      $('mmReset') && $('mmReset').addEventListener('click', memoryInit);
+    }
+    function handleMemClick(ev) {
+      const card = ev.target.closest('.memory-card'); if (!card) return;
+      const m = state.memory; if (m.locked) return;
+      const idx = parseInt(card.getAttribute('data-index'), 10);
+      if (m.flipped.includes(idx) || card.classList.contains('is-matched') || m.flipped.length >= 2) return;
+      card.classList.add('is-flipped'); m.flipped.push(idx);
+      if (m.flipped.length === 2) {
+        m.moves++; const mv = $('mmMoves'); if (mv) mv.textContent = toFa(m.moves);
+        const [a, b] = m.flipped;
+        if (m.cards[a].id === m.cards[b].id) {
+          setTimeout(() => { const els = $$('#mmGrid .memory-card'); els[a] && els[a].classList.add('is-matched'); els[b] && els[b].classList.add('is-matched'); m.matched += 2; const mm = $('mmMatched'); if (mm) mm.textContent = toFa(m.matched / 2); m.flipped = []; if (m.matched === m.cards.length) setTimeout(() => toast('🎉 آفرین!'), 300); }, 350);
+        } else { m.locked = true; addTimer(setTimeout(() => { const els = $$('#mmGrid .memory-card'); els[a] && els[a].classList.remove('is-flipped'); els[b] && els[b].classList.remove('is-flipped'); m.flipped = []; m.locked = false; }, 700)); }
+      }
+    }
+
+    /* ============ واکنش سریع ============ */
+    function reactionInit() { clearTimers(); state.reaction = { state: 'idle', startTime: 0, best: null, last: null, timeoutId: null }; reactionRender(); }
+    function reactionRender() {
+      const shell = $('gameShell'); if (!shell) return;
+      const r = state.reaction; let cls = '', big = 'برای شروع کلیک کن', sub = 'به محض سبز شدن، سریع کلیک کن';
+      if (r.state === 'waiting') { big = 'منتظر بمان…'; sub = 'هنوز سبز نشده'; }
+      else if (r.state === 'ready') { cls = 'ready'; big = 'حالا!'; sub = 'سریع کلیک کن'; }
+      else if (r.state === 'tooSoon') { cls = 'tooSoon'; big = 'زود زدی!'; sub = 'دوباره تلاش کن'; }
+      else if (r.state === 'done') { big = toFa(r.last) + ' میلی‌ثانیه'; sub = 'سرعت واکنش تو'; }
+      shell.innerHTML = `<div class="game-header"><div class="game-stats">${r.best != null ? `<span>بهترین: <b>${toFa(r.best)}</b> ms</span>` : ''}${r.last != null && r.state === 'done' ? `<span>آخرین: <b>${toFa(r.last)}</b> ms</span>` : ''}</div><button class="btn-game ghost" id="rxReset" type="button">شروع مجدد</button></div><div class="reaction-area"><div class="reaction-box ${cls}" id="rxBox"><div><div class="big-text">${big}</div><div class="sub-text">${sub}</div></div></div></div><p class="game-hint">هر چه سریع‌تر روی کادر سبز بزن.</p>`;
+      $('rxBox') && $('rxBox').addEventListener('click', reactionHandle);
+      $('rxReset') && $('rxReset').addEventListener('click', reactionInit);
+    }
+    function reactionHandle() {
+      const r = state.reaction;
+      if (r.state === 'idle' || r.state === 'done' || r.state === 'tooSoon') { r.state = 'waiting'; reactionRender(); r.timeoutId = setTimeout(() => { r.state = 'ready'; r.startTime = performance.now(); reactionRender(); }, 1200 + Math.random() * 2500); addTimer(r.timeoutId); }
+      else if (r.state === 'waiting') { clearTimeout(r.timeoutId); r.timeoutId = null; r.state = 'tooSoon'; reactionRender(); addTimer(setTimeout(() => { r.state = 'idle'; reactionRender(); }, 900)); }
+      else if (r.state === 'ready') { const ms = Math.round(performance.now() - r.startTime); r.last = ms; if (r.best == null || ms < r.best) r.best = ms; r.state = 'done'; reactionRender(); }
+    }
+
+    function switchTo(name) {
+      clearTimers();
+      if (state.plinko.animId) { cancelAnimationFrame(state.plinko.animId); state.plinko.animId = null; }
+      $$('.game-tab').forEach(t => t.classList.toggle('is-active', t.getAttribute('data-game') === name));
+      if (name === 'nummem') nummemInit();
+      else if (name === 'plinko') plinkoInit();
+      else if (name === 'guess') guessInit();
+      else if (name === 'memory') memoryInit();
+      else if (name === 'reaction') reactionInit();
+    }
+    function mount() { if (!initialized) initialized = true; const active = document.querySelector('.game-tab.is-active') || document.querySelector('.game-tab'); switchTo(active ? active.getAttribute('data-game') : 'nummem'); }
+    return { mount, switchTo, clearTimers };
+  })();
+
+  /* ===== BODY LOCK / DRAWER ===== */
+  function syncBodyLock() {
+    const open = ($('loginModal') && $('loginModal').classList.contains('is-open')) || ($('notifModal') && $('notifModal').classList.contains('is-open')) || ($('drawer') && $('drawer').classList.contains('is-open')) || ($('confirmFinishModal') && $('confirmFinishModal').classList.contains('is-open')) || ($('examTaking') && $('examTaking').classList.contains('is-open'));
+    document.body.classList.toggle('is-locked', !!open);
+  }
+  const drawer = $('drawer'), overlay = $('overlay');
+  function openDrawer() { if (!drawer) return; drawer.classList.add('is-open'); if (overlay) overlay.classList.add('is-open'); const om = $('openMenu'); if (om) om.setAttribute('aria-expanded', 'true'); syncBodyLock(); }
+  function closeDrawer() { if (!drawer) return; drawer.classList.remove('is-open'); if (overlay) overlay.classList.remove('is-open'); const om = $('openMenu'); if (om) om.setAttribute('aria-expanded', 'false'); syncBodyLock(); }
+  $('openMenu') && $('openMenu').addEventListener('click', openDrawer);
+  $('closeMenu') && $('closeMenu').addEventListener('click', closeDrawer);
+  overlay && overlay.addEventListener('click', closeDrawer);
+  $$('[data-close-drawer]').forEach(el => el.addEventListener('click', function () { closeDrawer(); if (el.hasAttribute('data-open-login')) setTimeout(openLoginModal, 260); }));
+  document.addEventListener('keydown', function (e) { if (e.key !== 'Escape') return; if (drawer && drawer.classList.contains('is-open')) closeDrawer(); if (loginModal && loginModal.classList.contains('is-open')) closeLoginModal(); if ($('notifModal') && $('notifModal').classList.contains('is-open')) closeNotifModal(); if ($('confirmFinishModal') && $('confirmFinishModal').classList.contains('is-open')) $('confirmFinishModal').classList.remove('is-open'); if ($('userDropdown') && $('userDropdown').classList.contains('is-open')) closeUserDropdown(); });
+
+  const headerEl = $('siteHeader'); let scrollTicking = false;
+  function onScroll() { if (!headerEl) return; const y = window.scrollY || window.pageYOffset || 0; if (y > 8) headerEl.classList.add('is-scrolled'); else headerEl.classList.remove('is-scrolled'); }
+  window.addEventListener('scroll', function () { if (!scrollTicking) { requestAnimationFrame(() => { onScroll(); scrollTicking = false; }); scrollTicking = true; } }, { passive: true });
+
+  /* ===== EVENT DELEGATION: notif actions ===== */
+  document.addEventListener('click', function (ev) {
+    const target = ev.target.closest('[data-notif-action]');
+    if (target) {
+      const action = target.getAttribute('data-notif-action');
+      const id = target.getAttribute('data-notif-id');
+      if (action === 'detail') openNotifModal(id);
+      else if (action === 'exams') { closeNotifModal(); if (location.hash !== '#exams') history.pushState(null, '', '#exams'); showPage('exams'); }
+      else if (action === 'student') { closeNotifModal(); showPage('home'); setTimeout(() => { const s = $('student'); s && s.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 100); }
+      else if (action === 'gallery') { closeNotifModal(); showPage('home'); setTimeout(() => { const s = $('gallery'); s && s.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 100); }
+    }
+  });
+  $('closeNotif') && $('closeNotif').addEventListener('click', closeNotifModal);
+  $('notifModal') && $('notifModal').addEventListener('click', e => { if (e.target === $('notifModal')) closeNotifModal(); });
+  $('ayahCopy') && $('ayahCopy').addEventListener('click', () => { if (!currentAyah) return; const text = currentAyah.text + '\n\nسوره ' + currentAyah.surah + '، آیه ' + toFa(currentAyah.number) + '\n\nترجمه: ' + currentAyah.translation; if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(() => toast('کپی شد.'), () => toast('نشد.')); else toast('پشتیبانی نمی‌شود.'); });
+  $('ayahShare') && $('ayahShare').addEventListener('click', () => { if (!currentAyah) return; const text = currentAyah.text + '\n\nسوره ' + currentAyah.surah + '، آیه ' + toFa(currentAyah.number) + '\n\n' + currentAyah.translation; if (navigator.share) navigator.share({ title: 'آیه امروز', text }).catch(() => {}); else toast('اشتراک‌گذاری پشتیبانی نمی‌شود.'); });
+  $('bellBtn') && $('bellBtn').addEventListener('click', function () { if (currentPage !== 'home') showPage('home'); setTimeout(() => { const s = $('notifications'); s && s.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 100); $('bellBtn').classList.remove('has-unread'); });
+  $$('.faq-q').forEach(btn => btn.addEventListener('click', function () { const item = btn.closest('.faq-item'); if (!item) return; item.classList.toggle('is-open'); }));
+
+  /* ===== REVEAL ===== */
+  function setupReveal() {
+    const els = $$('.reveal'); if (!els.length) return;
+    if (!('IntersectionObserver' in window)) { els.forEach(el => el.classList.add('is-in')); return; }
+    const io = new IntersectionObserver(entries => { entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('is-in'); io.unobserve(en.target); } }); }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    let i = 0; els.forEach(el => { el.style.transitionDelay = Math.min(i * 40, 200) + 'ms'; io.observe(el); i++; });
+  }
+  function scheduleMidnightRefresh() {
+    const now = new Date(); const next = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 0, 0, 5);
+    setTimeout(() => { safe(renderZekr)(true); safe(renderAyah)(); safe(renderInspiration)(); scheduleMidnightRefresh(); }, Math.max(1000, next - now));
+  }
+
+  /* ===== INIT ===== */
+  function init() {
+    safe(renderZekr)(); safe(renderAyah)(); safe(renderInspiration)(); safe(renderNotifications)(); safe(renderGallery)();
+    safe(setupReveal)(); safe(onScroll)(); safe(scheduleMidnightRefresh)(); safe(handleHash)();
+    const sess = Store.getSession();
+    if (sess && sess.code) { const st = Store.findStudentByCode(sess.code); if (st) showUserMenu(st); }
+    if (window.console && console.log) { console.log('%cپیروان حضرت مهدی(عج)', 'color:#2d6a4f;font-weight:bold;font-size:14px;'); }
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+  window.addEventListener('error', e => console.warn('[global-error]', e && e.message));
+  window.addEventListener('unhandledrejection', e => console.warn('[unhandled-rejection]', e && e.reason));
+})();
+</script>
+</body>
+</html>
